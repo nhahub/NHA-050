@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Cartify Automation Suite" verbose="1">
+    <test name="All Tests">
+        <classes>
+            <class name="com.cartify.tests.RegisterTest" />
+            <class name="com.cartify.tests.LoginTest" />
+            <class name="com.cartify.tests.ProfileTest" />
+            <class name="com.cartify.tests.ProductTest" />
+            <class name="com.cartify.tests.CartTest" />
+        </classes>
+    </test>
+</suite>

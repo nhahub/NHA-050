@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Cartify_Automation_Suite" class="navigator-link">
+              <span class="suite-name border-failed">Cartify Automation Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Cartify_Automation_Suite" class="navigator-link ">
+                    <span>D:\courses\java\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Cartify_Automation_Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Cartify_Automation_Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Cartify_Automation_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Cartify_Automation_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Cartify_Automation_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Cartify_Automation_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">15 methods, 2 failed,  2 skipped,  11 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Cartify_Automation_Suite" class="hide-methods failed suite-Cartify_Automation_Suite"> (hide)</a> <!-- hide-methods failed suite-Cartify_Automation_Suite -->
+                      <a href="#" panel-name="suite-Cartify_Automation_Suite" class="show-methods failed suite-Cartify_Automation_Suite"> (show)</a> <!-- show-methods failed suite-Cartify_Automation_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Cartify_Automation_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cartify_Automation_Suite" title="com.cartify.tests.RegisterTest" class="method navigator-link" hash-for-method="testAddressSubmission">testAddressSubmission</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cartify_Automation_Suite" title="com.cartify.tests.RegisterTest" class="method navigator-link" hash-for-method="testValidRegistration">testValidRegistration</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Cartify_Automation_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Cartify_Automation_Suite" class="hide-methods skipped suite-Cartify_Automation_Suite"> (hide)</a> <!-- hide-methods skipped suite-Cartify_Automation_Suite -->
+                      <a href="#" panel-name="suite-Cartify_Automation_Suite" class="show-methods skipped suite-Cartify_Automation_Suite"> (show)</a> <!-- show-methods skipped suite-Cartify_Automation_Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Cartify_Automation_Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cartify_Automation_Suite" title="com.cartify.tests.ProfileTest" class="method navigator-link" hash-for-method="testProfilePersistence">testProfilePersistence</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cartify_Automation_Suite" title="com.cartify.tests.ProfileTest" class="method navigator-link" hash-for-method="testProfileUpdate">testProfileUpdate</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Cartify_Automation_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Cartify_Automation_Suite" class="hide-methods passed suite-Cartify_Automation_Suite"> (hide)</a> <!-- hide-methods passed suite-Cartify_Automation_Suite -->
+                      <a href="#" panel-name="suite-Cartify_Automation_Suite" class="show-methods passed suite-Cartify_Automation_Suite"> (show)</a> <!-- show-methods passed suite-Cartify_Automation_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Cartify_Automation_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cartify_Automation_Suite" title="com.cartify.tests.CartTest" class="method navigator-link" hash-for-method="testCartPageLoads">testCartPageLoads</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cartify_Automation_Suite" title="com.cartify.tests.CartTest" class="method navigator-link" hash-for-method="testEmptyCartMessage">testEmptyCartMessage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cartify_Automation_Suite" title="com.cartify.tests.ProductTest" class="method navigator-link" hash-for-method="testEmptyState">testEmptyState</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cartify_Automation_Suite" title="com.cartify.tests.LoginTest" class="method navigator-link" hash-for-method="testIncorrectPassword">testIncorrectPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cartify_Automation_Suite" title="com.cartify.tests.ProductTest" class="method navigator-link" hash-for-method="testLoadProductsPage">testLoadProductsPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cartify_Automation_Suite" title="com.cartify.tests.LoginTest" class="method navigator-link" hash-for-method="testNonExistentUser">testNonExistentUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cartify_Automation_Suite" title="com.cartify.tests.LoginTest" class="method navigator-link" hash-for-method="testPasswordCaseSensitivity">testPasswordCaseSensitivity</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cartify_Automation_Suite" title="com.cartify.tests.RegisterTest" class="method navigator-link" hash-for-method="testPasswordMinLength">testPasswordMinLength</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cartify_Automation_Suite" title="com.cartify.tests.ProductTest" class="method navigator-link" hash-for-method="testSearchFunctionality">testSearchFunctionality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cartify_Automation_Suite" title="com.cartify.tests.ProductTest" class="method navigator-link" hash-for-method="testSortByPrice">testSortByPrice</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cartify_Automation_Suite" title="com.cartify.tests.CartTest" class="method navigator-link" hash-for-method="testStartShoppingRedirect">testStartShoppingRedirect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Cartify_Automation_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Cartify_Automation_Suite" class="panel Cartify_Automation_Suite">
+          <div class="suite-Cartify_Automation_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.cartify.tests.RegisterTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddressSubmission">
+                  </a> <!-- testAddressSubmission -->
+                  <span class="method-name">testAddressSubmission</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;label for=&quot;femalegen&quot;&gt;...&lt;/label&gt; is not clickable at point (735, 426). Other element would receive the click: &lt;a class=&quot;ui-state-default ui-state-active&quot; href=&quot;#&quot; aria-current=&quot;true&quot; data-date=&quot;...&quot;&gt;2&lt;/a&gt;
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [af99ac722fbcf9ed98f12365393eb7c3, clickElement {id=f.A39D27F5A05EEF524D3FD868E513A131.d.A75791AD9ADFC8376AF7FC17A5CB1BD6.e.55}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\abdal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61689}, goog:processID: 5664, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61689/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (af99ac722fbcf9ed98f12365393eb7c3)] -&gt; xpath: //label[normalize-space()=&apos;Female&apos;]]
+Session ID: af99ac722fbcf9ed98f12365393eb7c3
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
+	at com.cartify.pages.BasePage.click(BasePage.java:19)
+	at com.cartify.pages.RegisterPage.selectGender(RegisterPage.java:98)
+	at com.cartify.tests.RegisterTest.testAddressSubmission(RegisterTest.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC-U-1.9: Verify Address Step Submission)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testValidRegistration">
+                  </a> <!-- testValidRegistration -->
+                  <span class="method-name">testValidRegistration</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;label for=&quot;malegen&quot;&gt;...&lt;/label&gt; is not clickable at point (630, 426). Other element would receive the click: &lt;table class=&quot;ui-datepicker-calendar&quot;&gt;...&lt;/table&gt;
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c3a7364a366f6c94a6265c1d50fcd2eb, clickElement {id=f.2B5BA29FBE87D50E3E2BACE4F61939AC.d.9B932F6B532A7DD4A55107409FE2C805.e.56}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\abdal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59764}, goog:processID: 5520, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59764/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c3a7364a366f6c94a6265c1d50fcd2eb)] -&gt; xpath: //label[normalize-space()=&apos;Male&apos;]]
+Session ID: c3a7364a366f6c94a6265c1d50fcd2eb
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
+	at com.cartify.pages.BasePage.click(BasePage.java:19)
+	at com.cartify.pages.RegisterPage.selectGender(RegisterPage.java:96)
+	at com.cartify.tests.RegisterTest.testValidRegistration(RegisterTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC-U-1.1: Valid Registration Submission)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Cartify_Automation_Suite-class-failed -->
+          <div class="suite-Cartify_Automation_Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.cartify.tests.ProfileTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testProfilePersistence">
+                  </a> <!-- testProfilePersistence -->
+                  <span class="method-name">testProfilePersistence</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;next&quot; id=&quot;next2&quot;&gt;...&lt;/button&gt; is not clickable at point (765, 505). Other element would receive the click: &lt;a class=&quot;ui-state-default&quot; href=&quot;#&quot; aria-current=&quot;false&quot; data-date=&quot;...&quot;&gt;22&lt;/a&gt;
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3ca8a85c7558b15440a707d5a7fd31bd, clickElement {id=f.D0E7464DC435922D72503CCA7984F248.d.53E38D8B84298963AD2A5A9E3A4F2731.e.34}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\abdal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49745}, goog:processID: 24820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49745/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3ca8a85c7558b15440a707d5a7fd31bd)] -&gt; id: next2]
+Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
+	at com.cartify.pages.BasePage.click(BasePage.java:19)
+	at com.cartify.pages.RegisterPage.clickNext(RegisterPage.java:107)
+	at com.cartify.tests.ProfileTest.setUpPage(ProfileTest.java:27)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 38 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC-U-3.3: Profile Update: Data Persistence)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testProfileUpdate">
+                  </a> <!-- testProfileUpdate -->
+                  <span class="method-name">testProfileUpdate</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;next&quot; id=&quot;next2&quot;&gt;...&lt;/button&gt; is not clickable at point (765, 505). Other element would receive the click: &lt;a class=&quot;ui-state-default&quot; href=&quot;#&quot; aria-current=&quot;false&quot; data-date=&quot;...&quot;&gt;22&lt;/a&gt;
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3ca8a85c7558b15440a707d5a7fd31bd, clickElement {id=f.D0E7464DC435922D72503CCA7984F248.d.53E38D8B84298963AD2A5A9E3A4F2731.e.34}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\abdal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49745}, goog:processID: 24820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49745/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3ca8a85c7558b15440a707d5a7fd31bd)] -&gt; id: next2]
+Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
+	at com.cartify.pages.BasePage.click(BasePage.java:19)
+	at com.cartify.pages.RegisterPage.clickNext(RegisterPage.java:107)
+	at com.cartify.tests.ProfileTest.setUpPage(ProfileTest.java:27)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 38 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC-U-1.3: Profile Update Confirmation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Cartify_Automation_Suite-class-skipped -->
+          <div class="suite-Cartify_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.cartify.tests.CartTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCartPageLoads">
+                  </a> <!-- testCartPageLoads -->
+                  <span class="method-name">testCartPageLoads</span>
+                  <em>
+(TC-C-001: Cart page loads successfully)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEmptyCartMessage">
+                  </a> <!-- testEmptyCartMessage -->
+                  <span class="method-name">testEmptyCartMessage</span>
+                  <em>
+(TC-C-002: Empty Cart – Display message)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testStartShoppingRedirect">
+                  </a> <!-- testStartShoppingRedirect -->
+                  <span class="method-name">testStartShoppingRedirect</span>
+                  <em>
+(TC-C-003: Start Shopping redirects user to products)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Cartify_Automation_Suite-class-passed -->
+          <div class="suite-Cartify_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.cartify.tests.RegisterTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPasswordMinLength">
+                  </a> <!-- testPasswordMinLength -->
+                  <span class="method-name">testPasswordMinLength</span>
+                  <em>
+(TC-U-1.7: Password Minimum Length Check)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Cartify_Automation_Suite-class-passed -->
+          <div class="suite-Cartify_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.cartify.tests.ProductTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEmptyState">
+                  </a> <!-- testEmptyState -->
+                  <span class="method-name">testEmptyState</span>
+                  <em>
+(TC-PRP-014: Empty Products State)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoadProductsPage">
+                  </a> <!-- testLoadProductsPage -->
+                  <span class="method-name">testLoadProductsPage</span>
+                  <em>
+(TC-PRP-001: Load Products Page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchFunctionality">
+                  </a> <!-- testSearchFunctionality -->
+                  <span class="method-name">testSearchFunctionality</span>
+                  <em>
+(TC-PRP-020: Search Functionality)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSortByPrice">
+                  </a> <!-- testSortByPrice -->
+                  <span class="method-name">testSortByPrice</span>
+                  <em>
+(TC-SRT-001: Verify instant product Price Sorting)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Cartify_Automation_Suite-class-passed -->
+          <div class="suite-Cartify_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.cartify.tests.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIncorrectPassword">
+                  </a> <!-- testIncorrectPassword -->
+                  <span class="method-name">testIncorrectPassword</span>
+                  <em>
+(TC-U-1.2: Login: Incorrect Password Check)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNonExistentUser">
+                  </a> <!-- testNonExistentUser -->
+                  <span class="method-name">testNonExistentUser</span>
+                  <em>
+(TC-U-2.4: Login: Non-existent User Error)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPasswordCaseSensitivity">
+                  </a> <!-- testPasswordCaseSensitivity -->
+                  <span class="method-name">testPasswordCaseSensitivity</span>
+                  <em>
+(TC-U-2.5: Password Case Sensitivity)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Cartify_Automation_Suite-class-passed -->
+        </div> <!-- panel Cartify_Automation_Suite -->
+        <div panel-name="test-xml-Cartify_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\courses\java\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Cartify Automation Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;All Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.cartify.tests.RegisterTest&quot;/&gt;
+      &lt;class name=&quot;com.cartify.tests.LoginTest&quot;/&gt;
+      &lt;class name=&quot;com.cartify.tests.ProfileTest&quot;/&gt;
+      &lt;class name=&quot;com.cartify.tests.ProductTest&quot;/&gt;
+      &lt;class name=&quot;com.cartify.tests.CartTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- All Tests --&gt;
+&lt;/suite&gt; &lt;!-- Cartify Automation Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Cartify_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Cartify Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">All Tests (5 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Cartify_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Cartify Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Cartify_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Cartify Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Cartify_Automation_Suite');
+function tableData_Cartify_Automation_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(15);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testEmptyState')
+data.setCell(0, 2, 'com.cartify.tests.ProductTest')
+data.setCell(0, 3, 10019);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testAddressSubmission')
+data.setCell(1, 2, 'com.cartify.tests.RegisterTest')
+data.setCell(1, 3, 1966);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testValidRegistration')
+data.setCell(2, 2, 'com.cartify.tests.RegisterTest')
+data.setCell(2, 3, 1890);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testIncorrectPassword')
+data.setCell(3, 2, 'com.cartify.tests.LoginTest')
+data.setCell(3, 3, 641);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testNonExistentUser')
+data.setCell(4, 2, 'com.cartify.tests.LoginTest')
+data.setCell(4, 3, 625);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testPasswordCaseSensitivity')
+data.setCell(5, 2, 'com.cartify.tests.LoginTest')
+data.setCell(5, 3, 624);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testPasswordMinLength')
+data.setCell(6, 2, 'com.cartify.tests.RegisterTest')
+data.setCell(6, 3, 567);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testStartShoppingRedirect')
+data.setCell(7, 2, 'com.cartify.tests.CartTest')
+data.setCell(7, 3, 336);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testSearchFunctionality')
+data.setCell(8, 2, 'com.cartify.tests.ProductTest')
+data.setCell(8, 3, 203);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testSortByPrice')
+data.setCell(9, 2, 'com.cartify.tests.ProductTest')
+data.setCell(9, 3, 91);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testEmptyCartMessage')
+data.setCell(10, 2, 'com.cartify.tests.CartTest')
+data.setCell(10, 3, 45);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testCartPageLoads')
+data.setCell(11, 2, 'com.cartify.tests.CartTest')
+data.setCell(11, 3, 4);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testLoadProductsPage')
+data.setCell(12, 2, 'com.cartify.tests.ProductTest')
+data.setCell(12, 3, 3);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testProfilePersistence')
+data.setCell(13, 2, 'com.cartify.tests.ProfileTest')
+data.setCell(13, 3, 0);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testProfileUpdate')
+data.setCell(14, 2, 'com.cartify.tests.ProfileTest')
+data.setCell(14, 3, 0);
+window.suiteTableData['Cartify_Automation_Suite']= { tableData: data, tableDiv: 'times-div-Cartify_Automation_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <div id="times-div-Cartify_Automation_Suite">
+              </div> <!-- times-div-Cartify_Automation_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Cartify_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Cartify Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Cartify_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Cartify_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.cartify.tests.RegisterTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpPage</span>
+                <span class="method-start">2016 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testAddressSubmission</span>
+                <span class="method-start">3958 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">5928 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">6025 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpPage</span>
+                <span class="method-start">9033 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testPasswordMinLength</span>
+                <span class="method-start">10568 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">11135 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">11252 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpPage</span>
+                <span class="method-start">13557 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testValidRegistration</span>
+                <span class="method-start">15759 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">17657 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.cartify.tests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">17789 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpPage</span>
+                <span class="method-start">21929 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testIncorrectPassword</span>
+                <span class="method-start">23874 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">24516 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">24617 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpPage</span>
+                <span class="method-start">26358 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testNonExistentUser</span>
+                <span class="method-start">28107 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">28732 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">28827 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpPage</span>
+                <span class="method-start">30465 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testPasswordCaseSensitivity</span>
+                <span class="method-start">32734 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">33359 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.cartify.tests.ProfileTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">33475 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setUpPage</span>
+                <span class="method-start">35080 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpPage</span>
+                <span class="method-start">39437 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">39437 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.cartify.tests.ProductTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">39438 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpPage</span>
+                <span class="method-start">41119 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testEmptyState</span>
+                <span class="method-start">44160 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">54179 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">55895 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpPage</span>
+                <span class="method-start">57834 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLoadProductsPage</span>
+                <span class="method-start">59244 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">59248 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">59380 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpPage</span>
+                <span class="method-start">61005 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSearchFunctionality</span>
+                <span class="method-start">62239 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">62443 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">62579 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpPage</span>
+                <span class="method-start">64344 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSortByPrice</span>
+                <span class="method-start">66121 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">66212 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.cartify.tests.CartTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">66352 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpPage</span>
+                <span class="method-start">68188 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCartPageLoads</span>
+                <span class="method-start">71166 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">71170 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">71301 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpPage</span>
+                <span class="method-start">72946 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testEmptyCartMessage</span>
+                <span class="method-start">75017 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">75063 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">75211 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpPage</span>
+                <span class="method-start">76901 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testStartShoppingRedirect</span>
+                <span class="method-start">79112 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">79448 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
