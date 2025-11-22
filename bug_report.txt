@@ -1,10 +1,8 @@
--------------------------------------------------------------------------------
-Test set: TestSuite
--------------------------------------------------------------------------------
-Tests run: 20, Failures: 4, Errors: 0, Skipped: 6, Time elapsed: 86.17 s <<< FAILURE! -- in TestSuite
-com.cartify.tests.RegisterTest.testAddressSubmission -- Time elapsed: 2.261 s <<< FAILURE!
-org.openqa.selenium.ElementClickInterceptedException: 
-element click intercepted: Element <label for="femalegen">...</label> is not clickable at point (772, 464). Other element would receive the click: <a class="ui-state-default ui-state-active ui-state-hover" href="#" aria-current="true" data-date="...">2</a>
+Bug Report
+==========
+Test Case: testAddressSubmission
+Class: com.cartify.tests.RegisterTest
+Exception: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <label for="femalegen">...</label> is not clickable at point (772, 464). Other element would receive the click: <a class="ui-state-default ui-state-active ui-state-hover" href="#" aria-current="true" data-date="...">2</a>
   (Session info: chrome=142.0.7444.176)
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.1', java.version: '25.0.1'
@@ -13,6 +11,7 @@ Command: [68f97e10e39ae03e898c4073bb401b3a, clickElement {id=f.AD7AFE29AED4237C4
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: /var/folders/_t/4pp8lvfx0ln...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56998}, goog:processID: 31932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56998/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
 Element: [[ChromeDriver: chrome on mac (68f97e10e39ae03e898c4073bb401b3a)] -> css selector: label[for='femalegen']]
 Session ID: 68f97e10e39ae03e898c4073bb401b3a
+Stack Trace:
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -62,10 +61,10 @@ Session ID: 68f97e10e39ae03e898c4073bb401b3a
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-
-com.cartify.tests.RegisterTest.testValidRegistration -- Time elapsed: 1.569 s <<< FAILURE!
-org.openqa.selenium.ElementClickInterceptedException: 
-element click intercepted: Element <label for="malegen">...</label> is not clickable at point (667, 464). Other element would receive the click: <table class="ui-datepicker-calendar">...</table>
+--------------------------------------------------
+Test Case: testValidRegistration
+Class: com.cartify.tests.RegisterTest
+Exception: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <label for="malegen">...</label> is not clickable at point (667, 464). Other element would receive the click: <table class="ui-datepicker-calendar">...</table>
   (Session info: chrome=142.0.7444.176)
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.1', java.version: '25.0.1'
@@ -74,6 +73,7 @@ Command: [a14285ed5ea8bbf14e483fb5a62c1de3, clickElement {id=f.9B4673D1FFD86220E
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: /var/folders/_t/4pp8lvfx0ln...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57048}, goog:processID: 31983, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57048/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
 Element: [[ChromeDriver: chrome on mac (a14285ed5ea8bbf14e483fb5a62c1de3)] -> css selector: label[for='malegen']]
 Session ID: a14285ed5ea8bbf14e483fb5a62c1de3
+Stack Trace:
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -123,74 +123,11 @@ Session ID: a14285ed5ea8bbf14e483fb5a62c1de3
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-
-com.cartify.tests.ProfileTest.setUpPage -- Time elapsed: 7.658 s <<< FAILURE!
-org.openqa.selenium.ElementClickInterceptedException: 
-element click intercepted: Element <button type="button" class="next" id="next2">...</button> is not clickable at point (802, 543). Other element would receive the click: <a class="ui-state-default" href="#" aria-current="false" data-date="...">22</a>
-  (Session info: chrome=142.0.7444.176)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.1', java.version: '25.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3af89aed07b0e40f5cb067ab874827e3, clickElement {id=f.4613B13CEF4B38840B2701A35B50481D.d.8B81BE098472ED2FA0ABEE16D31EF020.e.32}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: /var/folders/_t/4pp8lvfx0ln...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57141}, goog:processID: 32059, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57141/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (3af89aed07b0e40f5cb067ab874827e3)] -> id: next2]
-Session ID: 3af89aed07b0e40f5cb067ab874827e3
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
-	at com.cartify.pages.BasePage.click(BasePage.java:19)
-	at com.cartify.pages.RegisterPage.clickNext(RegisterPage.java:108)
-	at com.cartify.tests.ProfileTest.setUpPage(ProfileTest.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:578)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-
-com.cartify.tests.CartTest.testStartShoppingRedirect -- Time elapsed: 0.310 s <<< FAILURE!
-java.lang.AssertionError: Should redirect to products page (Failure indicates known bug: redirects to home) expected [true] but found [false]
+--------------------------------------------------
+Test Case: testStartShoppingRedirect
+Class: com.cartify.tests.CartTest
+Exception: java.lang.AssertionError: Should redirect to products page (Failure indicates known bug: redirects to home) expected [true] but found [false]
+Stack Trace:
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
@@ -225,4 +162,4 @@ java.lang.AssertionError: Should redirect to products page (Failure indicates kn
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-
+--------------------------------------------------

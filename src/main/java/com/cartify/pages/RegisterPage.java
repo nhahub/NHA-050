@@ -32,10 +32,10 @@ public class RegisterPage extends BasePage {
     private WebElement phoneInput;
 
     // Step 3: Gender
-    @FindBy(xpath = "//label[normalize-space()='Male']")
+    @FindBy(css = "label[for='malegen']")
     private WebElement maleRadio;
 
-    @FindBy(xpath = "//label[normalize-space()='Female']")
+    @FindBy(css = "label[for='femalegen']")
     private WebElement femaleRadio;
 
     // Step 4: Date
@@ -64,7 +64,7 @@ public class RegisterPage extends BasePage {
 
     @FindBy(id = "submit")
     private WebElement submitButton;
-    
+
     @FindBy(xpath = "//*[contains(text(), 'Wrong') or contains(text(), 'Error') or contains(text(), 'required') or contains(text(), 'Password')]")
     private WebElement errorMessage;
 
@@ -90,7 +90,7 @@ public class RegisterPage extends BasePage {
         type(lastNameInput, lastName);
         type(phoneInput, phone);
     }
-    
+
     public void selectGender(boolean isMale) {
         if (isMale) {
             click(maleRadio);
@@ -98,26 +98,27 @@ public class RegisterPage extends BasePage {
             click(femaleRadio);
         }
     }
-    
+
     public void fillDate(String date) {
         type(birthDateInput, date);
+        driver.findElement(By.tagName("body")).click(); // Click empty space to close date picker
     }
-    
+
     public void clickNext() {
         click(nextButton2);
     }
-    
+
     private void clickVisibleNext() {
         // Deprecated or unused now, but keeping if needed for generic next
     }
-    
+
     public void fillAddress(String street, String city, String state) {
         type(streetAddressInput, street);
         type(cityInput, city);
         type(stateInput, state);
         click(submitButton);
     }
-    
+
     public boolean isMaleSelected() {
         return maleRadio.isSelected();
     }
@@ -129,9 +130,8 @@ public class RegisterPage extends BasePage {
     public String getBirthDate() {
         return birthDateInput.getAttribute("value");
     }
-    
+
     public String getErrorMessage() {
         return getText(errorMessage);
     }
 }
-

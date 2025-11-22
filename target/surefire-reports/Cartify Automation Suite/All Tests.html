@@ -1,91 +1,116 @@
 <html>
+
 <head>
-<title>TestNG:  All Tests</title>
-<link href="../testng.css" rel="stylesheet" type="text/css" />
-<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+	<title>TestNG: All Tests</title>
+	<link href="../testng.css" rel="stylesheet" type="text/css" />
+	<link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
-<style type="text/css">
-.log { display: none;} 
-.stack-trace { display: none;} 
-</style>
-<script type="text/javascript">
-<!--
-function flip(e) {
-  current = e.style.display;
-  if (current == 'block') {
-    e.style.display = 'none';
-    return 0;
-  }
-  else {
-    e.style.display = 'block';
-    return 1;
-  }
-}
+	<style type="text/css">
+		.log {
+			display: none;
+		}
 
-function toggleBox(szDivId, elem, msg1, msg2)
-{
-  var res = -1;  if (document.getElementById) {
-    res = flip(document.getElementById(szDivId));
-  }
-  else if (document.all) {
-    // this is the way old msie versions work
-    res = flip(document.all[szDivId]);
-  }
-  if(elem) {
-    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
-  }
-
-}
-
-function toggleAllBoxes() {
-  if (document.getElementsByTagName) {
-    d = document.getElementsByTagName('div');
-    for (i = 0; i < d.length; i++) {
-      if (d[i].className == 'log') {
-        flip(d[i]);
-      }
-    }
-  }
-}
-
-// -->
-</script>
+		.stack-trace {
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		<!--
+		function flip(e) {
+		  current = e.style.display;
+		  if (current == 'block') {
+			e.style.display = 'none';
+			return 0;
+		  }
+		  else {
+			e.style.display = 'block';
+			return 1;
+		  }
+		}
+		
+		function toggleBox(szDivId, elem, msg1, msg2)
+		{
+		  var res = -1;  if (document.getElementById) {
+			res = flip(document.getElementById(szDivId));
+		  }
+		  else if (document.all) {
+			// this is the way old msie versions work
+			res = flip(document.all[szDivId]);
+		  }
+		  if(elem) {
+			if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+		  }
+		
+		}
+		
+		function toggleAllBoxes() {
+		  if (document.getElementsByTagName) {
+			d = document.getElementsByTagName('div');
+			for (i = 0; i < d.length; i++) {
+			  if (d[i].className == 'log') {
+				flip(d[i]);
+			  }
+			}
+		  }
+		}
+		
+		// -->
+	</script>
 
 </head>
+
 <body>
-<h2 align='center'>All Tests</h2><table border='1' align="center">
-<tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/2/2</td>
-</tr><tr>
-<td>Started on:</td><td>Fri Nov 21 22:17:08 EET 2025</td>
-</tr>
-<tr><td>Total time:</td><td>79 seconds (79599 ms)</td>
-</tr><tr>
-<td>Included groups:</td><td></td>
-</tr><tr>
-<td>Excluded groups:</td><td></td>
-</tr>
-</table><p/>
-<small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.cartify.tests.ProfileTest.setUpPage()'><b>setUpPage</b><br>Test class: com.cartify.tests.ProfileTest</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;next&quot; id=&quot;next2&quot;&gt;...&lt;/button&gt; is not clickable at point (765, 505). Other element would receive the click: &lt;a class=&quot;ui-state-default&quot; href=&quot;#&quot; aria-current=&quot;false&quot; data-date=&quot;...&quot;&gt;22&lt;/a&gt;
+	<h2 align='center'>All Tests</h2>
+	<table border='1' align="center">
+		<tr>
+			<td>Tests passed/Failed/Skipped:</td>
+			<td>10/3/2</td>
+		</tr>
+		<tr>
+			<td>Started on:</td>
+			<td>Sat Nov 22 02:50:46 EET 2025</td>
+		</tr>
+		<tr>
+			<td>Total time:</td>
+			<td>85 seconds (85974 ms)</td>
+		</tr>
+		<tr>
+			<td>Included groups:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Excluded groups:</td>
+			<td></td>
+		</tr>
+	</table>
+	<p />
+	<small><i>(Hover the method name to see the test class name)</i></small>
+	<p />
+	<table width='100%' border='1' class='invocation-failed'>
+		<tr>
+			<td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td><b>Attribute(s)</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.ProfileTest.setUpPage()'><b>setUpPage</b><br>Test class:
+				com.cartify.tests.ProfileTest</td>
+			<td>
+				<div>
+					<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;next&quot; id=&quot;next2&quot;&gt;...&lt;/button&gt; is not clickable at point (802, 543). Other element would receive the click: &lt;a class=&quot;ui-state-default&quot; href=&quot;#&quot; aria-current=&quot;false&quot; data-date=&quot;...&quot;&gt;22&lt;/a&gt;
   (Session info: chrome=142.0.7444.176)
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.1&apos;, java.version: &apos;25.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3ca8a85c7558b15440a707d5a7fd31bd, clickElement {id=f.D0E7464DC435922D72503CCA7984F248.d.53E38D8B84298963AD2A5A9E3A4F2731.e.34}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\abdal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49745}, goog:processID: 24820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49745/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3ca8a85c7558b15440a707d5a7fd31bd)] -&gt; id: next2]
-Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
+Command: [3af89aed07b0e40f5cb067ab874827e3, clickElement {id=f.4613B13CEF4B38840B2701A35B50481D.d.8B81BE098472ED2FA0ABEE16D31EF020.e.32}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: /var/folders/_t/4pp8lvfx0ln...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57141}, goog:processID: 32059, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57141/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (3af89aed07b0e40f5cb067ab874827e3)] -&gt; id: next2]
+Session ID: 3af89aed07b0e40f5cb067ab874827e3
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -98,22 +123,26 @@ Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
 	at com.cartify.pages.BasePage.click(BasePage.java:19)
-	at com.cartify.pages.RegisterPage.clickNext(RegisterPage.java:107)
+	at com.cartify.pages.RegisterPage.clickNext(RegisterPage.java:108)
 	at com.cartify.tests.ProfileTest.setUpPage(ProfileTest.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 38 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2100487956", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2100487956'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;next&quot; id=&quot;next2&quot;&gt;...&lt;/button&gt; is not clickable at point (765, 505). Other element would receive the click: &lt;a class=&quot;ui-state-default&quot; href=&quot;#&quot; aria-current=&quot;false&quot; data-date=&quot;...&quot;&gt;22&lt;/a&gt;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 38 stack frames</pre>
+				</div><a href='#'
+					onClick='toggleBox("stack-trace52642932", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace52642932'>
+					<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;next&quot; id=&quot;next2&quot;&gt;...&lt;/button&gt; is not clickable at point (802, 543). Other element would receive the click: &lt;a class=&quot;ui-state-default&quot; href=&quot;#&quot; aria-current=&quot;false&quot; data-date=&quot;...&quot;&gt;22&lt;/a&gt;
   (Session info: chrome=142.0.7444.176)
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.1&apos;, java.version: &apos;25.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3ca8a85c7558b15440a707d5a7fd31bd, clickElement {id=f.D0E7464DC435922D72503CCA7984F248.d.53E38D8B84298963AD2A5A9E3A4F2731.e.34}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\abdal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49745}, goog:processID: 24820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49745/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3ca8a85c7558b15440a707d5a7fd31bd)] -&gt; id: next2]
-Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
+Command: [3af89aed07b0e40f5cb067ab874827e3, clickElement {id=f.4613B13CEF4B38840B2701A35B50481D.d.8B81BE098472ED2FA0ABEE16D31EF020.e.32}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: /var/folders/_t/4pp8lvfx0ln...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57141}, goog:processID: 32059, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57141/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (3af89aed07b0e40f5cb067ab874827e3)] -&gt; id: next2]
+Session ID: 3af89aed07b0e40f5cb067ab874827e3
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -123,15 +152,15 @@ Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
 	at com.cartify.pages.BasePage.click(BasePage.java:19)
-	at com.cartify.pages.RegisterPage.clickNext(RegisterPage.java:107)
+	at com.cartify.pages.RegisterPage.clickNext(RegisterPage.java:108)
 	at com.cartify.tests.ProfileTest.setUpPage(ProfileTest.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
 	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
@@ -144,7 +173,7 @@ Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 	at org.testng.TestRunner.privateRun(TestRunner.java:819)
 	at org.testng.TestRunner.run(TestRunner.java:619)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
@@ -164,58 +193,80 @@ Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-</pre></div></td>
-<td>4</td>
-<td>com.cartify.tests.ProfileTest@78e117e3</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.cartify.tests.ProfileTest.setUpPage()'><b>setUpPage</b><br>Test class: com.cartify.tests.ProfileTest</td>
-<td></td>
-<td>0</td>
-<td>com.cartify.tests.ProfileTest@78e117e3</td></tr>
-<tr>
-<td title='com.cartify.tests.ProfileTest.setUp()'><b>setUp</b><br>Test class: com.cartify.tests.ProfileTest</td>
-<td></td>
-<td>0</td>
-<td>com.cartify.tests.ProfileTest@78e117e3</td></tr>
-<tr>
-<td title='com.cartify.tests.ProfileTest.tearDown()'><b>tearDown</b><br>Test class: com.cartify.tests.ProfileTest</td>
-<td></td>
-<td>0</td>
-<td>com.cartify.tests.ProfileTest@78e117e3</td></tr>
-<tr>
-<td title='com.cartify.tests.ProfileTest.tearDown()'><b>tearDown</b><br>Test class: com.cartify.tests.ProfileTest</td>
-<td></td>
-<td>0</td>
-<td>com.cartify.tests.ProfileTest@78e117e3</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.cartify.tests.RegisterTest.testAddressSubmission()'><b>testAddressSubmission</b><br>Test class: com.cartify.tests.RegisterTest<br>Test method: TC-U-1.9: Verify Address Step Submission</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;label for=&quot;femalegen&quot;&gt;...&lt;/label&gt; is not clickable at point (735, 426). Other element would receive the click: &lt;a class=&quot;ui-state-default ui-state-active&quot; href=&quot;#&quot; aria-current=&quot;true&quot; data-date=&quot;...&quot;&gt;2&lt;/a&gt;
+</pre>
+				</div>
+			</td>
+			<td>3</td>
+			<td>com.cartify.tests.ProfileTest@3c9d0b9d</td>
+		</tr>
+	</table>
+	<p>
+	<table width='100%' border='1' class='invocation-skipped'>
+		<tr>
+			<td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td><b>Attribute(s)</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.ProfileTest.setUpPage()'><b>setUpPage</b><br>Test class:
+				com.cartify.tests.ProfileTest</td>
+			<td></td>
+			<td>0</td>
+			<td>com.cartify.tests.ProfileTest@3c9d0b9d</td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.ProfileTest.setUp()'><b>setUp</b><br>Test class: com.cartify.tests.ProfileTest
+			</td>
+			<td></td>
+			<td>0</td>
+			<td>com.cartify.tests.ProfileTest@3c9d0b9d</td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.ProfileTest.tearDown()'><b>tearDown</b><br>Test class:
+				com.cartify.tests.ProfileTest</td>
+			<td></td>
+			<td>0</td>
+			<td>com.cartify.tests.ProfileTest@3c9d0b9d</td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.ProfileTest.tearDown()'><b>tearDown</b><br>Test class:
+				com.cartify.tests.ProfileTest</td>
+			<td></td>
+			<td>0</td>
+			<td>com.cartify.tests.ProfileTest@3c9d0b9d</td>
+		</tr>
+	</table>
+	<p>
+	<table width='100%' border='1' class='invocation-failed'>
+		<tr>
+			<td colspan='4' align='center'><b>FAILED TESTS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td><b>Attribute(s)</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.RegisterTest.testAddressSubmission()'><b>testAddressSubmission</b><br>Test
+				class: com.cartify.tests.RegisterTest<br>Test method: TC-U-1.9: Verify Address Step Submission</td>
+			<td>
+				<div>
+					<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;label for=&quot;femalegen&quot;&gt;...&lt;/label&gt; is not clickable at point (772, 464). Other element would receive the click: &lt;a class=&quot;ui-state-default ui-state-active ui-state-hover&quot; href=&quot;#&quot; aria-current=&quot;true&quot; data-date=&quot;...&quot;&gt;2&lt;/a&gt;
   (Session info: chrome=142.0.7444.176)
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.1&apos;, java.version: &apos;25.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [af99ac722fbcf9ed98f12365393eb7c3, clickElement {id=f.A39D27F5A05EEF524D3FD868E513A131.d.A75791AD9ADFC8376AF7FC17A5CB1BD6.e.55}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\abdal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61689}, goog:processID: 5664, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61689/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (af99ac722fbcf9ed98f12365393eb7c3)] -&gt; xpath: //label[normalize-space()=&apos;Female&apos;]]
-Session ID: af99ac722fbcf9ed98f12365393eb7c3
+Command: [68f97e10e39ae03e898c4073bb401b3a, clickElement {id=f.AD7AFE29AED4237C4DAC87837F344F75.d.923552D6FF189F44242435B77F8FB6D9.e.53}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: /var/folders/_t/4pp8lvfx0ln...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56998}, goog:processID: 31932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56998/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (68f97e10e39ae03e898c4073bb401b3a)] -&gt; css selector: label[for=&apos;femalegen&apos;]]
+Session ID: 68f97e10e39ae03e898c4073bb401b3a
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -229,21 +280,25 @@ Session ID: af99ac722fbcf9ed98f12365393eb7c3
 	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
 	at com.cartify.pages.BasePage.click(BasePage.java:19)
 	at com.cartify.pages.RegisterPage.selectGender(RegisterPage.java:98)
-	at com.cartify.tests.RegisterTest.testAddressSubmission(RegisterTest.java:48)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1837533591", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1837533591'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;label for=&quot;femalegen&quot;&gt;...&lt;/label&gt; is not clickable at point (735, 426). Other element would receive the click: &lt;a class=&quot;ui-state-default ui-state-active&quot; href=&quot;#&quot; aria-current=&quot;true&quot; data-date=&quot;...&quot;&gt;2&lt;/a&gt;
+	at com.cartify.tests.RegisterTest.testAddressSubmission(RegisterTest.java:50)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 34 stack frames</pre>
+				</div><a href='#'
+					onClick='toggleBox("stack-trace1765690649", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace1765690649'>
+					<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;label for=&quot;femalegen&quot;&gt;...&lt;/label&gt; is not clickable at point (772, 464). Other element would receive the click: &lt;a class=&quot;ui-state-default ui-state-active ui-state-hover&quot; href=&quot;#&quot; aria-current=&quot;true&quot; data-date=&quot;...&quot;&gt;2&lt;/a&gt;
   (Session info: chrome=142.0.7444.176)
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.1&apos;, java.version: &apos;25.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [af99ac722fbcf9ed98f12365393eb7c3, clickElement {id=f.A39D27F5A05EEF524D3FD868E513A131.d.A75791AD9ADFC8376AF7FC17A5CB1BD6.e.55}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\abdal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61689}, goog:processID: 5664, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61689/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (af99ac722fbcf9ed98f12365393eb7c3)] -&gt; xpath: //label[normalize-space()=&apos;Female&apos;]]
-Session ID: af99ac722fbcf9ed98f12365393eb7c3
+Command: [68f97e10e39ae03e898c4073bb401b3a, clickElement {id=f.AD7AFE29AED4237C4DAC87837F344F75.d.923552D6FF189F44242435B77F8FB6D9.e.53}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: /var/folders/_t/4pp8lvfx0ln...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56998}, goog:processID: 31932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56998/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (68f97e10e39ae03e898c4073bb401b3a)] -&gt; css selector: label[for=&apos;femalegen&apos;]]
+Session ID: 68f97e10e39ae03e898c4073bb401b3a
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -253,15 +308,15 @@ Session ID: af99ac722fbcf9ed98f12365393eb7c3
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
 	at com.cartify.pages.BasePage.click(BasePage.java:19)
 	at com.cartify.pages.RegisterPage.selectGender(RegisterPage.java:98)
-	at com.cartify.tests.RegisterTest.testAddressSubmission(RegisterTest.java:48)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.cartify.tests.RegisterTest.testAddressSubmission(RegisterTest.java:50)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
@@ -270,7 +325,7 @@ Session ID: af99ac722fbcf9ed98f12365393eb7c3
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 	at org.testng.TestRunner.privateRun(TestRunner.java:819)
 	at org.testng.TestRunner.run(TestRunner.java:619)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
@@ -290,20 +345,26 @@ Session ID: af99ac722fbcf9ed98f12365393eb7c3
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-</pre></div></td>
-<td>1</td>
-<td>com.cartify.tests.RegisterTest@7b227d8d</td></tr>
-<tr>
-<td title='com.cartify.tests.RegisterTest.testValidRegistration()'><b>testValidRegistration</b><br>Test class: com.cartify.tests.RegisterTest<br>Test method: TC-U-1.1: Valid Registration Submission</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;label for=&quot;malegen&quot;&gt;...&lt;/label&gt; is not clickable at point (630, 426). Other element would receive the click: &lt;table class=&quot;ui-datepicker-calendar&quot;&gt;...&lt;/table&gt;
+</pre>
+				</div>
+			</td>
+			<td>2</td>
+			<td>com.cartify.tests.RegisterTest@6293abcc</td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.RegisterTest.testValidRegistration()'><b>testValidRegistration</b><br>Test
+				class: com.cartify.tests.RegisterTest<br>Test method: TC-U-1.1: Valid Registration Submission</td>
+			<td>
+				<div>
+					<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;label for=&quot;malegen&quot;&gt;...&lt;/label&gt; is not clickable at point (667, 464). Other element would receive the click: &lt;table class=&quot;ui-datepicker-calendar&quot;&gt;...&lt;/table&gt;
   (Session info: chrome=142.0.7444.176)
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.1&apos;, java.version: &apos;25.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c3a7364a366f6c94a6265c1d50fcd2eb, clickElement {id=f.2B5BA29FBE87D50E3E2BACE4F61939AC.d.9B932F6B532A7DD4A55107409FE2C805.e.56}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\abdal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59764}, goog:processID: 5520, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59764/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (c3a7364a366f6c94a6265c1d50fcd2eb)] -&gt; xpath: //label[normalize-space()=&apos;Male&apos;]]
-Session ID: c3a7364a366f6c94a6265c1d50fcd2eb
+Command: [a14285ed5ea8bbf14e483fb5a62c1de3, clickElement {id=f.9B4673D1FFD86220E0A54B636CCB1AC9.d.A00E09A81D4D183CF4A6AF0B28583482.e.53}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: /var/folders/_t/4pp8lvfx0ln...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57048}, goog:processID: 31983, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57048/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (a14285ed5ea8bbf14e483fb5a62c1de3)] -&gt; css selector: label[for=&apos;malegen&apos;]]
+Session ID: a14285ed5ea8bbf14e483fb5a62c1de3
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -317,21 +378,25 @@ Session ID: c3a7364a366f6c94a6265c1d50fcd2eb
 	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
 	at com.cartify.pages.BasePage.click(BasePage.java:19)
 	at com.cartify.pages.RegisterPage.selectGender(RegisterPage.java:96)
-	at com.cartify.tests.RegisterTest.testValidRegistration(RegisterTest.java:29)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace438874950", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace438874950'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;label for=&quot;malegen&quot;&gt;...&lt;/label&gt; is not clickable at point (630, 426). Other element would receive the click: &lt;table class=&quot;ui-datepicker-calendar&quot;&gt;...&lt;/table&gt;
+	at com.cartify.tests.RegisterTest.testValidRegistration(RegisterTest.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 34 stack frames</pre>
+				</div><a href='#'
+					onClick='toggleBox("stack-trace1172417096", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace1172417096'>
+					<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;label for=&quot;malegen&quot;&gt;...&lt;/label&gt; is not clickable at point (667, 464). Other element would receive the click: &lt;table class=&quot;ui-datepicker-calendar&quot;&gt;...&lt;/table&gt;
   (Session info: chrome=142.0.7444.176)
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.1&apos;, java.version: &apos;25.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c3a7364a366f6c94a6265c1d50fcd2eb, clickElement {id=f.2B5BA29FBE87D50E3E2BACE4F61939AC.d.9B932F6B532A7DD4A55107409FE2C805.e.56}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\abdal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59764}, goog:processID: 5520, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59764/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (c3a7364a366f6c94a6265c1d50fcd2eb)] -&gt; xpath: //label[normalize-space()=&apos;Male&apos;]]
-Session ID: c3a7364a366f6c94a6265c1d50fcd2eb
+Command: [a14285ed5ea8bbf14e483fb5a62c1de3, clickElement {id=f.9B4673D1FFD86220E0A54B636CCB1AC9.d.A00E09A81D4D183CF4A6AF0B28583482.e.53}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: /var/folders/_t/4pp8lvfx0ln...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57048}, goog:processID: 31983, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57048/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (a14285ed5ea8bbf14e483fb5a62c1de3)] -&gt; css selector: label[for=&apos;malegen&apos;]]
+Session ID: a14285ed5ea8bbf14e483fb5a62c1de3
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -341,15 +406,15 @@ Session ID: c3a7364a366f6c94a6265c1d50fcd2eb
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
 	at com.cartify.pages.BasePage.click(BasePage.java:19)
 	at com.cartify.pages.RegisterPage.selectGender(RegisterPage.java:96)
-	at com.cartify.tests.RegisterTest.testValidRegistration(RegisterTest.java:29)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.cartify.tests.RegisterTest.testValidRegistration(RegisterTest.java:30)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
@@ -358,7 +423,7 @@ Session ID: c3a7364a366f6c94a6265c1d50fcd2eb
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 	at org.testng.TestRunner.privateRun(TestRunner.java:819)
 	at org.testng.TestRunner.run(TestRunner.java:619)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
@@ -378,93 +443,178 @@ Session ID: c3a7364a366f6c94a6265c1d50fcd2eb
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-</pre></div></td>
-<td>1</td>
-<td>com.cartify.tests.RegisterTest@7b227d8d</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.cartify.tests.ProductTest.testEmptyState()'><b>testEmptyState</b><br>Test class: com.cartify.tests.ProductTest<br>Test method: TC-PRP-014: Empty Products State</td>
-<td></td>
-<td>10</td>
-<td>com.cartify.tests.ProductTest@2ea227af</td></tr>
-<tr>
-<td title='com.cartify.tests.ProductTest.testSortByPrice()'><b>testSortByPrice</b><br>Test class: com.cartify.tests.ProductTest<br>Test method: TC-SRT-001: Verify instant product Price Sorting</td>
-<td></td>
-<td>0</td>
-<td>com.cartify.tests.ProductTest@2ea227af</td></tr>
-<tr>
-<td title='com.cartify.tests.LoginTest.testNonExistentUser()'><b>testNonExistentUser</b><br>Test class: com.cartify.tests.LoginTest<br>Test method: TC-U-2.4: Login: Non-existent User Error</td>
-<td></td>
-<td>0</td>
-<td>com.cartify.tests.LoginTest@1534f01b</td></tr>
-<tr>
-<td title='com.cartify.tests.LoginTest.testIncorrectPassword()'><b>testIncorrectPassword</b><br>Test class: com.cartify.tests.LoginTest<br>Test method: TC-U-1.2: Login: Incorrect Password Check</td>
-<td></td>
-<td>0</td>
-<td>com.cartify.tests.LoginTest@1534f01b</td></tr>
-<tr>
-<td title='com.cartify.tests.ProductTest.testLoadProductsPage()'><b>testLoadProductsPage</b><br>Test class: com.cartify.tests.ProductTest<br>Test method: TC-PRP-001: Load Products Page</td>
-<td></td>
-<td>0</td>
-<td>com.cartify.tests.ProductTest@2ea227af</td></tr>
-<tr>
-<td title='com.cartify.tests.CartTest.testEmptyCartMessage()'><b>testEmptyCartMessage</b><br>Test class: com.cartify.tests.CartTest<br>Test method: TC-C-002: Empty Cart – Display message</td>
-<td></td>
-<td>0</td>
-<td>com.cartify.tests.CartTest@4386f16</td></tr>
-<tr>
-<td title='com.cartify.tests.LoginTest.testPasswordCaseSensitivity()'><b>testPasswordCaseSensitivity</b><br>Test class: com.cartify.tests.LoginTest<br>Test method: TC-U-2.5: Password Case Sensitivity</td>
-<td></td>
-<td>0</td>
-<td>com.cartify.tests.LoginTest@1534f01b</td></tr>
-<tr>
-<td title='com.cartify.tests.ProductTest.testSearchFunctionality()'><b>testSearchFunctionality</b><br>Test class: com.cartify.tests.ProductTest<br>Test method: TC-PRP-020: Search Functionality</td>
-<td></td>
-<td>0</td>
-<td>com.cartify.tests.ProductTest@2ea227af</td></tr>
-<tr>
-<td title='com.cartify.tests.CartTest.testCartPageLoads()'><b>testCartPageLoads</b><br>Test class: com.cartify.tests.CartTest<br>Test method: TC-C-001: Cart page loads successfully</td>
-<td></td>
-<td>0</td>
-<td>com.cartify.tests.CartTest@4386f16</td></tr>
-<tr>
-<td title='com.cartify.tests.CartTest.testStartShoppingRedirect()'><b>testStartShoppingRedirect</b><br>Test class: com.cartify.tests.CartTest<br>Test method: TC-C-003: Start Shopping redirects user to products</td>
-<td></td>
-<td>0</td>
-<td>com.cartify.tests.CartTest@4386f16</td></tr>
-<tr>
-<td title='com.cartify.tests.RegisterTest.testPasswordMinLength()'><b>testPasswordMinLength</b><br>Test class: com.cartify.tests.RegisterTest<br>Test method: TC-U-1.7: Password Minimum Length Check</td>
-<td></td>
-<td>0</td>
-<td>com.cartify.tests.RegisterTest@7b227d8d</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.cartify.tests.ProfileTest.testProfilePersistence()'><b>testProfilePersistence</b><br>Test class: com.cartify.tests.ProfileTest<br>Test method: TC-U-3.3: Profile Update: Data Persistence</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;next&quot; id=&quot;next2&quot;&gt;...&lt;/button&gt; is not clickable at point (765, 505). Other element would receive the click: &lt;a class=&quot;ui-state-default&quot; href=&quot;#&quot; aria-current=&quot;false&quot; data-date=&quot;...&quot;&gt;22&lt;/a&gt;
+</pre>
+				</div>
+			</td>
+			<td>1</td>
+			<td>com.cartify.tests.RegisterTest@6293abcc</td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.CartTest.testStartShoppingRedirect()'><b>testStartShoppingRedirect</b><br>Test
+				class: com.cartify.tests.CartTest<br>Test method: TC-C-003: Start Shopping redirects user to products
+			</td>
+			<td>
+				<div>
+					<pre>java.lang.AssertionError: Should redirect to products page (Failure indicates known bug: redirects to home) expected [true] but found [false]
+	at com.cartify.tests.CartTest.testStartShoppingRedirect(CartTest.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 32 stack frames</pre>
+				</div><a href='#'
+					onClick='toggleBox("stack-trace1172814713", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace1172814713'>
+					<pre>java.lang.AssertionError: Should redirect to products page (Failure indicates known bug: redirects to home) expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.cartify.tests.CartTest.testStartShoppingRedirect(CartTest.java:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre>
+				</div>
+			</td>
+			<td>0</td>
+			<td>com.cartify.tests.CartTest@2f112965</td>
+		</tr>
+	</table>
+	<p>
+	<table width='100%' border='1' class='invocation-passed'>
+		<tr>
+			<td colspan='4' align='center'><b>PASSED TESTS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td><b>Attribute(s)</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.ProductTest.testSortByPrice()'><b>testSortByPrice</b><br>Test class:
+				com.cartify.tests.ProductTest<br>Test method: TC-SRT-001: Verify instant product Price Sorting</td>
+			<td></td>
+			<td>1</td>
+			<td>com.cartify.tests.ProductTest@43301423</td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.LoginTest.testIncorrectPassword()'><b>testIncorrectPassword</b><br>Test class:
+				com.cartify.tests.LoginTest<br>Test method: TC-U-1.2: Login: Incorrect Password Check</td>
+			<td></td>
+			<td>0</td>
+			<td>com.cartify.tests.LoginTest@6dbb137d</td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.ProductTest.testEmptyState()'><b>testEmptyState</b><br>Test class:
+				com.cartify.tests.ProductTest<br>Test method: TC-PRP-014: Empty Products State</td>
+			<td></td>
+			<td>10</td>
+			<td>com.cartify.tests.ProductTest@43301423</td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.ProductTest.testSearchFunctionality()'><b>testSearchFunctionality</b><br>Test
+				class: com.cartify.tests.ProductTest<br>Test method: TC-PRP-020: Search Functionality</td>
+			<td></td>
+			<td>0</td>
+			<td>com.cartify.tests.ProductTest@43301423</td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.RegisterTest.testPasswordMinLength()'><b>testPasswordMinLength</b><br>Test
+				class: com.cartify.tests.RegisterTest<br>Test method: TC-U-1.7: Password Minimum Length Check</td>
+			<td></td>
+			<td>1</td>
+			<td>com.cartify.tests.RegisterTest@6293abcc</td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.LoginTest.testNonExistentUser()'><b>testNonExistentUser</b><br>Test class:
+				com.cartify.tests.LoginTest<br>Test method: TC-U-2.4: Login: Non-existent User Error</td>
+			<td></td>
+			<td>0</td>
+			<td>com.cartify.tests.LoginTest@6dbb137d</td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.ProductTest.testLoadProductsPage()'><b>testLoadProductsPage</b><br>Test class:
+				com.cartify.tests.ProductTest<br>Test method: TC-PRP-001: Load Products Page</td>
+			<td></td>
+			<td>0</td>
+			<td>com.cartify.tests.ProductTest@43301423</td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.LoginTest.testPasswordCaseSensitivity()'>
+				<b>testPasswordCaseSensitivity</b><br>Test class: com.cartify.tests.LoginTest<br>Test method: TC-U-2.5:
+				Password Case Sensitivity</td>
+			<td></td>
+			<td>1</td>
+			<td>com.cartify.tests.LoginTest@6dbb137d</td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.CartTest.testEmptyCartMessage()'><b>testEmptyCartMessage</b><br>Test class:
+				com.cartify.tests.CartTest<br>Test method: TC-C-002: Empty Cart – Display message</td>
+			<td></td>
+			<td>0</td>
+			<td>com.cartify.tests.CartTest@2f112965</td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.CartTest.testCartPageLoads()'><b>testCartPageLoads</b><br>Test class:
+				com.cartify.tests.CartTest<br>Test method: TC-C-001: Cart page loads successfully</td>
+			<td></td>
+			<td>0</td>
+			<td>com.cartify.tests.CartTest@2f112965</td>
+		</tr>
+	</table>
+	<p>
+	<table width='100%' border='1' class='invocation-skipped'>
+		<tr>
+			<td colspan='4' align='center'><b>SKIPPED TESTS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td><b>Attribute(s)</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.ProfileTest.testProfilePersistence()'><b>testProfilePersistence</b><br>Test
+				class: com.cartify.tests.ProfileTest<br>Test method: TC-U-3.3: Profile Update: Data Persistence</td>
+			<td>
+				<div>
+					<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;next&quot; id=&quot;next2&quot;&gt;...&lt;/button&gt; is not clickable at point (802, 543). Other element would receive the click: &lt;a class=&quot;ui-state-default&quot; href=&quot;#&quot; aria-current=&quot;false&quot; data-date=&quot;...&quot;&gt;22&lt;/a&gt;
   (Session info: chrome=142.0.7444.176)
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.1&apos;, java.version: &apos;25.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3ca8a85c7558b15440a707d5a7fd31bd, clickElement {id=f.D0E7464DC435922D72503CCA7984F248.d.53E38D8B84298963AD2A5A9E3A4F2731.e.34}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\abdal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49745}, goog:processID: 24820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49745/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3ca8a85c7558b15440a707d5a7fd31bd)] -&gt; id: next2]
-Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
+Command: [3af89aed07b0e40f5cb067ab874827e3, clickElement {id=f.4613B13CEF4B38840B2701A35B50481D.d.8B81BE098472ED2FA0ABEE16D31EF020.e.32}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: /var/folders/_t/4pp8lvfx0ln...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57141}, goog:processID: 32059, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57141/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (3af89aed07b0e40f5cb067ab874827e3)] -&gt; id: next2]
+Session ID: 3af89aed07b0e40f5cb067ab874827e3
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -477,22 +627,26 @@ Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
 	at com.cartify.pages.BasePage.click(BasePage.java:19)
-	at com.cartify.pages.RegisterPage.clickNext(RegisterPage.java:107)
+	at com.cartify.pages.RegisterPage.clickNext(RegisterPage.java:108)
 	at com.cartify.tests.ProfileTest.setUpPage(ProfileTest.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 38 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace909914828", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace909914828'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;next&quot; id=&quot;next2&quot;&gt;...&lt;/button&gt; is not clickable at point (765, 505). Other element would receive the click: &lt;a class=&quot;ui-state-default&quot; href=&quot;#&quot; aria-current=&quot;false&quot; data-date=&quot;...&quot;&gt;22&lt;/a&gt;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 38 stack frames</pre>
+				</div><a href='#'
+					onClick='toggleBox("stack-trace2012528704", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace2012528704'>
+					<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;next&quot; id=&quot;next2&quot;&gt;...&lt;/button&gt; is not clickable at point (802, 543). Other element would receive the click: &lt;a class=&quot;ui-state-default&quot; href=&quot;#&quot; aria-current=&quot;false&quot; data-date=&quot;...&quot;&gt;22&lt;/a&gt;
   (Session info: chrome=142.0.7444.176)
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.1&apos;, java.version: &apos;25.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3ca8a85c7558b15440a707d5a7fd31bd, clickElement {id=f.D0E7464DC435922D72503CCA7984F248.d.53E38D8B84298963AD2A5A9E3A4F2731.e.34}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\abdal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49745}, goog:processID: 24820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49745/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3ca8a85c7558b15440a707d5a7fd31bd)] -&gt; id: next2]
-Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
+Command: [3af89aed07b0e40f5cb067ab874827e3, clickElement {id=f.4613B13CEF4B38840B2701A35B50481D.d.8B81BE098472ED2FA0ABEE16D31EF020.e.32}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: /var/folders/_t/4pp8lvfx0ln...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57141}, goog:processID: 32059, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57141/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (3af89aed07b0e40f5cb067ab874827e3)] -&gt; id: next2]
+Session ID: 3af89aed07b0e40f5cb067ab874827e3
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -502,15 +656,15 @@ Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
 	at com.cartify.pages.BasePage.click(BasePage.java:19)
-	at com.cartify.pages.RegisterPage.clickNext(RegisterPage.java:107)
+	at com.cartify.pages.RegisterPage.clickNext(RegisterPage.java:108)
 	at com.cartify.tests.ProfileTest.setUpPage(ProfileTest.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
 	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
@@ -523,7 +677,7 @@ Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 	at org.testng.TestRunner.privateRun(TestRunner.java:819)
 	at org.testng.TestRunner.run(TestRunner.java:619)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
@@ -543,20 +697,26 @@ Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-</pre></div></td>
-<td>0</td>
-<td>com.cartify.tests.ProfileTest@78e117e3</td></tr>
-<tr>
-<td title='com.cartify.tests.ProfileTest.testProfileUpdate()'><b>testProfileUpdate</b><br>Test class: com.cartify.tests.ProfileTest<br>Test method: TC-U-1.3: Profile Update Confirmation</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;next&quot; id=&quot;next2&quot;&gt;...&lt;/button&gt; is not clickable at point (765, 505). Other element would receive the click: &lt;a class=&quot;ui-state-default&quot; href=&quot;#&quot; aria-current=&quot;false&quot; data-date=&quot;...&quot;&gt;22&lt;/a&gt;
+</pre>
+				</div>
+			</td>
+			<td>0</td>
+			<td>com.cartify.tests.ProfileTest@3c9d0b9d</td>
+		</tr>
+		<tr>
+			<td title='com.cartify.tests.ProfileTest.testProfileUpdate()'><b>testProfileUpdate</b><br>Test class:
+				com.cartify.tests.ProfileTest<br>Test method: TC-U-1.3: Profile Update Confirmation</td>
+			<td>
+				<div>
+					<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;next&quot; id=&quot;next2&quot;&gt;...&lt;/button&gt; is not clickable at point (802, 543). Other element would receive the click: &lt;a class=&quot;ui-state-default&quot; href=&quot;#&quot; aria-current=&quot;false&quot; data-date=&quot;...&quot;&gt;22&lt;/a&gt;
   (Session info: chrome=142.0.7444.176)
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.1&apos;, java.version: &apos;25.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3ca8a85c7558b15440a707d5a7fd31bd, clickElement {id=f.D0E7464DC435922D72503CCA7984F248.d.53E38D8B84298963AD2A5A9E3A4F2731.e.34}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\abdal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49745}, goog:processID: 24820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49745/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3ca8a85c7558b15440a707d5a7fd31bd)] -&gt; id: next2]
-Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
+Command: [3af89aed07b0e40f5cb067ab874827e3, clickElement {id=f.4613B13CEF4B38840B2701A35B50481D.d.8B81BE098472ED2FA0ABEE16D31EF020.e.32}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: /var/folders/_t/4pp8lvfx0ln...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57141}, goog:processID: 32059, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57141/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (3af89aed07b0e40f5cb067ab874827e3)] -&gt; id: next2]
+Session ID: 3af89aed07b0e40f5cb067ab874827e3
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -569,22 +729,26 @@ Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
 	at com.cartify.pages.BasePage.click(BasePage.java:19)
-	at com.cartify.pages.RegisterPage.clickNext(RegisterPage.java:107)
+	at com.cartify.pages.RegisterPage.clickNext(RegisterPage.java:108)
 	at com.cartify.tests.ProfileTest.setUpPage(ProfileTest.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 38 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace5987161", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace5987161'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;next&quot; id=&quot;next2&quot;&gt;...&lt;/button&gt; is not clickable at point (765, 505). Other element would receive the click: &lt;a class=&quot;ui-state-default&quot; href=&quot;#&quot; aria-current=&quot;false&quot; data-date=&quot;...&quot;&gt;22&lt;/a&gt;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 38 stack frames</pre>
+				</div><a href='#'
+					onClick='toggleBox("stack-trace368788838", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace368788838'>
+					<pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;next&quot; id=&quot;next2&quot;&gt;...&lt;/button&gt; is not clickable at point (802, 543). Other element would receive the click: &lt;a class=&quot;ui-state-default&quot; href=&quot;#&quot; aria-current=&quot;false&quot; data-date=&quot;...&quot;&gt;22&lt;/a&gt;
   (Session info: chrome=142.0.7444.176)
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.1&apos;, java.version: &apos;25.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3ca8a85c7558b15440a707d5a7fd31bd, clickElement {id=f.D0E7464DC435922D72503CCA7984F248.d.53E38D8B84298963AD2A5A9E3A4F2731.e.34}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\abdal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49745}, goog:processID: 24820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49745/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3ca8a85c7558b15440a707d5a7fd31bd)] -&gt; id: next2]
-Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
+Command: [3af89aed07b0e40f5cb067ab874827e3, clickElement {id=f.4613B13CEF4B38840B2701A35B50481D.d.8B81BE098472ED2FA0ABEE16D31EF020.e.32}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: /var/folders/_t/4pp8lvfx0ln...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57141}, goog:processID: 32059, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57141/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (3af89aed07b0e40f5cb067ab874827e3)] -&gt; id: next2]
+Session ID: 3af89aed07b0e40f5cb067ab874827e3
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -594,15 +758,15 @@ Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
 	at com.cartify.pages.BasePage.click(BasePage.java:19)
-	at com.cartify.pages.RegisterPage.clickNext(RegisterPage.java:107)
+	at com.cartify.pages.RegisterPage.clickNext(RegisterPage.java:108)
 	at com.cartify.tests.ProfileTest.setUpPage(ProfileTest.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
 	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
@@ -615,7 +779,7 @@ Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 	at org.testng.TestRunner.privateRun(TestRunner.java:819)
 	at org.testng.TestRunner.run(TestRunner.java:619)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
@@ -635,9 +799,14 @@ Session ID: 3ca8a85c7558b15440a707d5a7fd31bd
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-</pre></div></td>
-<td>0</td>
-<td>com.cartify.tests.ProfileTest@78e117e3</td></tr>
-</table><p>
+</pre>
+				</div>
+			</td>
+			<td>0</td>
+			<td>com.cartify.tests.ProfileTest@3c9d0b9d</td>
+		</tr>
+	</table>
+	<p>
 </body>
+
 </html>

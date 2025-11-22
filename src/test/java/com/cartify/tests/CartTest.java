@@ -14,7 +14,7 @@ public class CartTest extends BaseTest {
     public void setUpPage() {
         cartPage = new CartPage(driver);
         loginPage = new LoginPage(driver);
-        
+
         // Login first as some cart features might need it
         loginPage.open();
         loginPage.login("newuser@test.com", "ValidPass123@");
@@ -39,7 +39,7 @@ public class CartTest extends BaseTest {
         // User said it redirects to Home instead of Products (Bug TC-C-003)
         // We assert what EXPECTED result is (Products page)
         // If it fails, it confirms the bug.
-        Assert.assertTrue(driver.getCurrentUrl().contains("products") || driver.getCurrentUrl().contains("index"), 
-                "Should redirect to products or home (known bug redirects to home)");
+        Assert.assertTrue(driver.getCurrentUrl().contains("products"),
+                "Should redirect to products page (Failure indicates known bug: redirects to home)");
     }
 }

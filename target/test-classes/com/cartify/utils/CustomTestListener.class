@@ -1,0 +1,168 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+package com.cartify.utils;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+public class CustomTestListener implements ITestListener {
+   private List<ITestResult> passedTests = new ArrayList();
+   private List<ITestResult> failedTests = new ArrayList();
+   private List<ITestResult> skippedTests = new ArrayList();
+
+   public CustomTestListener() {
+   }
+
+   public void onTestSuccess(ITestResult result) {
+      this.passedTests.add(result);
+   }
+
+   public void onTestFailure(ITestResult result) {
+      this.failedTests.add(result);
+   }
+
+   public void onTestSkipped(ITestResult result) {
+      this.skippedTests.add(result);
+   }
+
+   public void onFinish(ITestContext context) {
+      this.generateSummaryReport();
+      if (!this.failedTests.isEmpty()) {
+         this.generateBugReport();
+      }
+
+   }
+
+   private void generateSummaryReport() {
+      try {
+         Throwable var1 = null;
+         Object var2 = null;
+
+         try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("summary_report.txt"));
+
+            try {
+               writer.write("Test Execution Summary Report");
+               writer.newLine();
+               writer.write("=============================");
+               writer.newLine();
+               writer.write("Total Tests Run: " + (this.passedTests.size() + this.failedTests.size() + this.skippedTests.size()));
+               writer.newLine();
+               writer.write("Passed: " + this.passedTests.size());
+               writer.newLine();
+               writer.write("Failed: " + this.failedTests.size());
+               writer.newLine();
+               writer.write("Skipped: " + this.skippedTests.size());
+               writer.newLine();
+               writer.newLine();
+               writer.write("Detailed Results:");
+               writer.newLine();
+               Iterator var5 = this.passedTests.iterator();
+
+               ITestResult result;
+               while(var5.hasNext()) {
+                  result = (ITestResult)var5.next();
+                  writer.write("[PASS] " + result.getName());
+                  writer.newLine();
+               }
+
+               var5 = this.failedTests.iterator();
+
+               while(var5.hasNext()) {
+                  result = (ITestResult)var5.next();
+                  writer.write("[FAIL] " + result.getName());
+                  writer.newLine();
+               }
+
+               var5 = this.skippedTests.iterator();
+
+               while(var5.hasNext()) {
+                  result = (ITestResult)var5.next();
+                  writer.write("[SKIP] " + result.getName());
+                  writer.newLine();
+               }
+            } finally {
+               if (writer != null) {
+                  writer.close();
+               }
+
+            }
+         } catch (Throwable var13) {
+            if (var1 == null) {
+               var1 = var13;
+            } else if (var1 != var13) {
+               var1.addSuppressed(var13);
+            }
+
+            throw var1;
+         }
+      } catch (IOException var14) {
+         var14.printStackTrace();
+      }
+
+   }
+
+   private void generateBugReport() {
+      try {
+         Throwable var1 = null;
+         Object var2 = null;
+
+         try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("bug_report.txt"));
+
+            try {
+               writer.write("Bug Report");
+               writer.newLine();
+               writer.write("==========");
+               writer.newLine();
+               Iterator var5 = this.failedTests.iterator();
+
+               while(var5.hasNext()) {
+                  ITestResult result = (ITestResult)var5.next();
+                  writer.write("Test Case: " + result.getName());
+                  writer.newLine();
+                  writer.write("Class: " + result.getTestClass().getName());
+                  writer.newLine();
+                  writer.write("Exception: " + String.valueOf(result.getThrowable()));
+                  writer.newLine();
+                  writer.write("Stack Trace:");
+                  writer.newLine();
+                  StackTraceElement[] var9;
+                  int var8 = (var9 = result.getThrowable().getStackTrace()).length;
+
+                  for(int var7 = 0; var7 < var8; ++var7) {
+                     StackTraceElement element = var9[var7];
+                     writer.write("\tat " + element.toString());
+                     writer.newLine();
+                  }
+
+                  writer.write("--------------------------------------------------");
+                  writer.newLine();
+               }
+            } finally {
+               if (writer != null) {
+                  writer.close();
+               }
+
+            }
+         } catch (Throwable var17) {
+            if (var1 == null) {
+               var1 = var17;
+            } else if (var1 != var17) {
+               var1.addSuppressed(var17);
+            }
+
+            throw var1;
+         }
+      } catch (IOException var18) {
+         var18.printStackTrace();
+      }
+
+   }
+}
