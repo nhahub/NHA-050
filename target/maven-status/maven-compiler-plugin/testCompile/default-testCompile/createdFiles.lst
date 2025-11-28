@@ -1,7 +1,3 @@
-com/cartify/tests/LoginTest.class
-com/cartify/tests/ProductTest.class
-com/cartify/tests/RegisterTest.class
-com/cartify/utils/CustomTestListener.class
-com/cartify/tests/CartTest.class
+com/cartify/tests/EndToEndFlowTest.class
 com/cartify/tests/BaseTest.class
-com/cartify/tests/ProfileTest.class
+com/cartify/utils/CustomTestListener.class

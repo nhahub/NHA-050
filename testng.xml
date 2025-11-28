@@ -5,11 +5,7 @@
     </listeners>
     <test name="All Tests">
         <classes>
-            <class name="com.cartify.tests.RegisterTest" />
-            <class name="com.cartify.tests.LoginTest" />
-            <class name="com.cartify.tests.ProfileTest" />
-            <class name="com.cartify.tests.ProductTest" />
-            <class name="com.cartify.tests.CartTest" />
+            <class name="com.cartify.tests.EndToEndFlowTest" />
         </classes>
     </test>
 </suite>

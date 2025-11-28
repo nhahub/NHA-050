@@ -7,12 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ProfilePage extends BasePage {
 
-    @FindBy(id = "profile-name") // Placeholder
+    @FindBy(css = ".user-name")
     private WebElement profileName;
-    
-    @FindBy(id = "profile-email") // Placeholder
+
+    @FindBy(css = ".user-email")
     private WebElement profileEmail;
-    
+
     @FindBy(id = "save-btn") // Placeholder
     private WebElement saveButton;
 
@@ -24,8 +24,16 @@ public class ProfilePage extends BasePage {
     public void open() {
         driver.get("https://cartify0.netlify.app/profile");
     }
-    
+
     public boolean isProfileLoaded() {
         return isDisplayed(profileName);
+    }
+
+    public String getProfileName() {
+        return getText(profileName);
+    }
+
+    public String getProfileEmail() {
+        return getText(profileEmail);
     }
 }

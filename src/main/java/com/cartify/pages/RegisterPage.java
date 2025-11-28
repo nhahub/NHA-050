@@ -52,7 +52,7 @@ public class RegisterPage extends BasePage {
     @FindBy(css = "input[placeholder='State']")
     private WebElement stateInput;
 
-    @FindBy(css = "input[placeholder='Zip Code']")
+    @FindBy(css = "input[placeholder='ZIP Code']")
     private WebElement zipCodeInput;
 
     @FindBy(css = "input[placeholder='Country']")
@@ -68,7 +68,7 @@ public class RegisterPage extends BasePage {
     @FindBy(id = "next3")
     private WebElement nextButton3; // Assuming there is a 3rd one or submit is next
 
-    @FindBy(id = "submit")
+    @FindBy(css = "input[value='Start for free']")
     private WebElement submitButton;
 
     @FindBy(xpath = "//*[contains(text(), 'Wrong') or contains(text(), 'Error') or contains(text(), 'required') or contains(text(), 'Password')]")
@@ -111,7 +111,9 @@ public class RegisterPage extends BasePage {
         System.out.println("Filling date: " + date);
         type(birthDateInput, date);
         birthDateInput.sendKeys(org.openqa.selenium.Keys.TAB);
-        System.out.println("Date filled and tabbed");
+        // Click body to close date picker if it's open
+        driver.findElement(org.openqa.selenium.By.tagName("body")).click();
+        System.out.println("Date filled and tabbed, body clicked");
     }
 
     public void clickNext() {
@@ -121,8 +123,9 @@ public class RegisterPage extends BasePage {
         }
         // Ensure button is clickable
         wait.until(ExpectedConditions.elementToBeClickable(nextButton2));
-        click(nextButton2);
-        System.out.println("Clicked next2");
+        // Try JS click
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", nextButton2);
+        System.out.println("Clicked next2 via JS");
 
         if (isDisplayed(errorMessage)) {
             System.out.println("Error message displayed AFTER clicking next2: " + getText(errorMessage));

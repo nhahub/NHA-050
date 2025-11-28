@@ -1,6 +1,6 @@
 com/cartify/pages/RegisterPage.class
+com/cartify/pages/WishlistPage.class
 com/cartify/pages/LoginPage.class
-com/cartify/pages/CartPage.class
 com/cartify/pages/ProductPage.class
 com/cartify/pages/ProfilePage.class
 com/cartify/pages/BasePage.class

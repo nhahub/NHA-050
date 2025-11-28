@@ -24,17 +24,20 @@ public class ProductPage extends BasePage {
     private WebElement sortDropdown;
 
     // Locators for product card elements (inferred/placeholders)
-    @FindBy(css = ".product-card") 
+    @FindBy(css = ".product-card")
     private WebElement productCardContainer;
-    
-    @FindBy(css = ".product-name") 
+
+    @FindBy(css = ".product-name")
     private WebElement productName;
-    
-    @FindBy(css = ".product-price") 
+
+    @FindBy(css = ".product-price")
     private WebElement productPrice;
-    
-    @FindBy(css = ".add-to-cart-btn") 
+
+    @FindBy(css = ".add-to-cart-btn")
     private WebElement addToCartButton;
+
+    @FindBy(css = ".btn-wishlist")
+    private WebElement addToWishlistButton;
 
     public ProductPage(WebDriver driver) {
         super(driver);
@@ -42,7 +45,8 @@ public class ProductPage extends BasePage {
     }
 
     public void open() {
-        driver.get("https://cartify0.netlify.app/products");
+        // Navigate to a category that has products (e.g. Clothes)
+        driver.get("https://cartify0.netlify.app/products.html?categoryId=2");
     }
 
     public void searchFor(String term) {
@@ -62,8 +66,12 @@ public class ProductPage extends BasePage {
         Select select = new Select(sortDropdown);
         select.selectByVisibleText(option);
     }
-    
+
     public boolean isProductDisplayed() {
         return isDisplayed(productCardContainer);
+    }
+
+    public void addToWishlist() {
+        click(addToWishlistButton);
     }
 }
