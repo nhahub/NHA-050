@@ -1,0 +1,5 @@
+com/company/cartify/tests/CartPageTest.class
+com/company/cartify/tests/main.class
+com/company/cartify/tests/CheckoutPageTest.class
+com/company/cartify/tests/SimpleFrameworkTest.class
+com/company/cartify/tests/base/BaseTest.class
