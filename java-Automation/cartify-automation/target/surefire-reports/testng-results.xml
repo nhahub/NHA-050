@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-11-30T22:48:49 EET" name="Cartify Automation Suite" finished-at="2025-11-30T22:49:54 EET" duration-ms="65171">
+    <groups>
+    </groups>
+    <test started-at="2025-11-30T22:48:49 EET" name="All Tests" finished-at="2025-11-30T22:49:54 EET" duration-ms="65171">
+      <class name="com.cartify.tests.EndToEndFlowTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.cartify.tests.EndToEndFlowTest@18d87d80]" started-at="2025-11-30T22:48:49 EET" name="setUp" finished-at="2025-11-30T22:48:53 EET" duration-ms="4153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testEndToEndFlow()[pri:0, instance:com.cartify.tests.EndToEndFlowTest@18d87d80]" started-at="2025-11-30T22:48:53 EET" name="testEndToEndFlow" description="E2E: Registration -&gt; Account Verification -&gt; Wishlist Interaction" finished-at="2025-11-30T22:49:54 EET" duration-ms="60896" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEndToEndFlow -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.cartify.tests.EndToEndFlowTest@18d87d80]" started-at="2025-11-30T22:49:54 EET" name="tearDown" finished-at="2025-11-30T22:49:54 EET" duration-ms="110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.cartify.tests.EndToEndFlowTest -->
+    </test> <!-- All Tests -->
+  </suite> <!-- Cartify Automation Suite -->
+</testng-results>
