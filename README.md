@@ -118,6 +118,16 @@ Java Streams: Used in WishlistPage to efficiently map and filter product lists.
 
 Custom Listeners: Automatically generates a text-based summary and bug report after every execution.
 
+## 📂 Documentation & Artifacts
+
+All detailed test documentation is available in the [Test_Artifacts](./Test_Artifacts) folder.
+
+| Artifact | Format | Description |
+| :--- | :---: | :--- |
+| **Master Test Plan** | [📥 Excel](./Test_Artifacts/Master_Test_Plan_v1.0.xlsx) | Combined Manual UI & API Test Cases, Traceability Matrix, and Bug Log. |
+| **Executive Report** | [📊 PDF](./docs/QA_Strategy_Presentation.pdf) | High-level summary presentation for stakeholders (Strategy, Metrics, Defects). |
+| **Bug Report** | [🐞 Text](./bug_report.txt) | Auto-generated log from the latest automation run. |
+
 👥 The QA Team (Team 50)
 Abdallah Mohamed: Team Lead, User Pages, Automation Architect.
 
