@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-29T20:43:05 EET" name="Surefire suite" finished-at="2025-11-29T20:44:16 EET" duration-ms="70790">
+  <suite started-at="2025-11-30T19:59:51 EET" name="Surefire suite" finished-at="2025-11-30T20:00:51 EET" duration-ms="60348">
     <groups>
     </groups>
-    <test started-at="2025-11-29T20:43:05 EET" name="Surefire test" finished-at="2025-11-29T20:44:16 EET" duration-ms="70790">
+    <test started-at="2025-11-30T19:59:51 EET" name="Surefire test" finished-at="2025-11-30T20:00:51 EET" duration-ms="60348">
       <class name="com.cartify.tests.EndToEndFlowTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.cartify.tests.EndToEndFlowTest@709ba3fb]" started-at="2025-11-29T20:43:05 EET" name="setUp" finished-at="2025-11-29T20:43:08 EET" duration-ms="2611" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.cartify.tests.EndToEndFlowTest@429bd883]" started-at="2025-11-30T19:59:51 EET" name="setUp" finished-at="2025-11-30T19:59:54 EET" duration-ms="3433" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testEndToEndFlow()[pri:0, instance:com.cartify.tests.EndToEndFlowTest@709ba3fb]" started-at="2025-11-29T20:43:08 EET" name="testEndToEndFlow" description="E2E: Registration -&gt; Account Verification -&gt; Wishlist Interaction" finished-at="2025-11-29T20:44:16 EET" duration-ms="68071" status="PASS">
+        <test-method signature="testEndToEndFlow()[pri:0, instance:com.cartify.tests.EndToEndFlowTest@429bd883]" started-at="2025-11-30T19:59:54 EET" name="testEndToEndFlow" description="E2E: Registration -&gt; Account Verification -&gt; Wishlist Interaction" finished-at="2025-11-30T20:00:51 EET" duration-ms="56803" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEndToEndFlow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.cartify.tests.EndToEndFlowTest@709ba3fb]" started-at="2025-11-29T20:44:16 EET" name="tearDown" finished-at="2025-11-29T20:44:16 EET" duration-ms="96" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.cartify.tests.EndToEndFlowTest@429bd883]" started-at="2025-11-30T20:00:51 EET" name="tearDown" finished-at="2025-11-30T20:00:51 EET" duration-ms="100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

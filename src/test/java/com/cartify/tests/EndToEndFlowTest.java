@@ -1,8 +1,12 @@
 package com.cartify.tests;
 
 import com.cartify.pages.*;
+import com.cartify.utils.ReportLogger;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import java.time.Duration;
 
 public class EndToEndFlowTest extends BaseTest {
 
@@ -25,29 +29,34 @@ public class EndToEndFlowTest extends BaseTest {
         registerPage.fillAddress("123 E2E St", "Test City", "Test State", "12345", "Test Country");
 
         // Wait for redirection or check URL
-        System.out.println("Registration submitted. Current URL: " + driver.getCurrentUrl());
-        // Simple wait to allow submission to process
+        ReportLogger.log("Registration submitted. Current URL: " + driver.getCurrentUrl());
+        // Dynamic wait for redirection
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
+            wait.until(ExpectedConditions.or(
+                    ExpectedConditions.urlContains("login"),
+                    ExpectedConditions.urlContains("index")));
+        } catch (Exception e) {
+            ReportLogger.log("Wait for redirection timed out or failed: " + e.getMessage());
         }
-        System.out.println("After wait. Current URL: " + driver.getCurrentUrl());
+        ReportLogger.log("After wait. Current URL: " + driver.getCurrentUrl());
 
         // Verify redirection (assuming redirection to login or home, then we login or
         // go to profile)
         // Check if we are on login page
         if (driver.getCurrentUrl().contains("login")) {
-            System.out.println("Redirected to login page, logging in...");
+            ReportLogger.log("Redirected to login page, logging in...");
             LoginPage loginPage = new LoginPage(driver);
             // Verify inputs and use Remember Me
             loginPage.login(username, password, true);
 
             // Wait for login to process
             try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
+                wait.until(ExpectedConditions.not(ExpectedConditions.urlContains("login")));
+            } catch (Exception e) {
+                ReportLogger.log("Wait for login timed out: " + e.getMessage());
             }
-            System.out.println("After login wait. Current URL: " + driver.getCurrentUrl());
+            ReportLogger.log("After login wait. Current URL: " + driver.getCurrentUrl());
         }
 
         // 2. Account Verification
@@ -56,33 +65,33 @@ public class EndToEndFlowTest extends BaseTest {
 
         // Check if redirected to login
         if (driver.getCurrentUrl().contains("login")) {
-            System.out.println("Redirected to login page after accessing profile, logging in...");
+            ReportLogger.log("Redirected to login page after accessing profile, logging in...");
             LoginPage loginPage = new LoginPage(driver);
             loginPage.login(username, password);
 
             // Wait for login to process
             try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
+                wait.until(ExpectedConditions.not(ExpectedConditions.urlContains("login")));
+            } catch (Exception e) {
             }
-            System.out.println("After login wait. Current URL: " + driver.getCurrentUrl());
+            ReportLogger.log("After login wait. Current URL: " + driver.getCurrentUrl());
 
             if (driver.getCurrentUrl().contains("login")) {
-                System.out.println("Login failed with username. Error: " + loginPage.getErrorMessage());
+                ReportLogger.log("Login failed with username. Error: " + loginPage.getErrorMessage());
                 // Try login with email
-                System.out.println("Trying login with email...");
+                ReportLogger.log("Trying login with email...");
                 loginPage.login(email, password);
                 try {
-                    Thread.sleep(3000);
-                } catch (InterruptedException e) {
+                    wait.until(ExpectedConditions.not(ExpectedConditions.urlContains("login")));
+                } catch (Exception e) {
                 }
-                System.out.println("After email login wait. Current URL: " + driver.getCurrentUrl());
+                ReportLogger.log("After email login wait. Current URL: " + driver.getCurrentUrl());
 
                 // Print browser logs
                 org.openqa.selenium.logging.LogEntries logEntries = driver.manage().logs()
                         .get(org.openqa.selenium.logging.LogType.BROWSER);
                 for (org.openqa.selenium.logging.LogEntry entry : logEntries) {
-                    System.out.println("BROWSER LOG: " + entry.getLevel() + " " + entry.getMessage());
+                    ReportLogger.log("BROWSER LOG: " + entry.getLevel() + " " + entry.getMessage());
                 }
             }
 
@@ -96,11 +105,11 @@ public class EndToEndFlowTest extends BaseTest {
         try {
             Assert.assertTrue(profilePage.isProfileLoaded(), "Profile page should be loaded");
         } catch (AssertionError e) {
-            System.out.println("Profile page not loaded. Current URL: " + driver.getCurrentUrl());
+            ReportLogger.log("Profile page not loaded. Current URL: " + driver.getCurrentUrl());
             try {
                 java.nio.file.Files.write(java.nio.file.Paths.get("debug_profile_source.html"),
                         driver.getPageSource().getBytes());
-                System.out.println("Page source saved to debug_profile_source.html");
+                ReportLogger.log("Page source saved to debug_profile_source.html");
             } catch (java.io.IOException ioException) {
                 ioException.printStackTrace();
             }
@@ -133,12 +142,17 @@ public class EndToEndFlowTest extends BaseTest {
         try {
             // Wait for products to load
             try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
+                // Re-initialize wait if needed or reuse
+                WebDriverWait productWait = new WebDriverWait(driver, Duration.ofSeconds(5));
+                // We can't easily wait for productPage.isProductDisplayed() directly with
+                // ExpectedConditions unless we expose the locator.
+                // But we can use a lambda.
+                productWait.until(d -> productPage.isProductDisplayed());
+            } catch (Exception e) {
             }
 
             if (!productPage.isProductDisplayed()) {
-                System.out.println("Product card not displayed. Injecting mock product...");
+                ReportLogger.log("Product card not displayed. Injecting mock product...");
                 ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
                         "products = [{" +
                                 "  productId: 999," +
@@ -148,8 +162,9 @@ public class EndToEndFlowTest extends BaseTest {
                                 "}];" +
                                 "renderProducts();");
                 try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
+                    WebDriverWait mockWait = new WebDriverWait(driver, Duration.ofSeconds(2));
+                    mockWait.until(d -> productPage.isProductDisplayed());
+                } catch (Exception e) {
                 }
             }
 
@@ -157,21 +172,21 @@ public class EndToEndFlowTest extends BaseTest {
 
             // Handle expected alert
             try {
-                org.openqa.selenium.support.ui.WebDriverWait wait = new org.openqa.selenium.support.ui.WebDriverWait(
+                org.openqa.selenium.support.ui.WebDriverWait alertWait = new org.openqa.selenium.support.ui.WebDriverWait(
                         driver, java.time.Duration.ofSeconds(5));
-                wait.until(org.openqa.selenium.support.ui.ExpectedConditions.alertIsPresent());
+                alertWait.until(org.openqa.selenium.support.ui.ExpectedConditions.alertIsPresent());
                 org.openqa.selenium.Alert alert = driver.switchTo().alert();
-                System.out.println("Alert text: " + alert.getText());
+                ReportLogger.log("Alert text: " + alert.getText());
                 alert.accept();
             } catch (Exception e) {
-                System.out.println("No alert appeared after adding to wishlist.");
+                ReportLogger.log("No alert appeared after adding to wishlist.");
             }
         } catch (Exception e) {
-            System.out.println("Failed to interact with wishlist. Current URL: " + driver.getCurrentUrl());
+            ReportLogger.log("Failed to interact with wishlist. Current URL: " + driver.getCurrentUrl());
             try {
                 java.nio.file.Files.write(java.nio.file.Paths.get("debug_product_source.html"),
                         driver.getPageSource().getBytes());
-                System.out.println("Page source saved to debug_product_source.html");
+                ReportLogger.log("Page source saved to debug_product_source.html");
             } catch (java.io.IOException ioException) {
                 ioException.printStackTrace();
             }
