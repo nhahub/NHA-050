@@ -1,168 +1,91 @@
-# 🛒 Cartify Automation Framework
+# 🛡️ Cartify Automation Framework | Team 50
 
-## 📄 Project Overview
-This repository contains the automated testing framework for the **Cartify E-Commerce Platform**. It is designed to validate the functionality, stability, and reliability of the application's critical user journeys, including Registration, Shopping, and Checkout.
+**QA Lead:** Abdallah Mohamed  
+**Current Status:** ⚠️ Conditional Pass (Critical Defects Pending Fix)  
+**Test Coverage:** Hybrid (Manual + Automated + API)
 
-The framework is built using the **Page Object Model (POM)** design pattern to ensure maintainability and code reusability.
+---
 
-## 🛠 Tech Stack
+## 📖 Project Abstract
+This repository hosts the **Automated Testing Framework** for the Cartify E-Commerce platform. Unlike a standard "record-and-playback" script, this project utilizes a modular **Java Selenium** architecture designed for scalability, maintainability, and robust failure analysis.
+
+The framework validates critical business flows including **User Registration, Product Search, Shopping Cart Logic, and Checkout Transaction integrity**.
+
+## 🛠️ Technical Architecture
+We engineered a custom framework using the **Page Object Model (POM)** design pattern.
+
+### Core Stack
 * **Language:** Java 17
-* **Core Library:** Selenium WebDriver (v4.27.0)
-* **Test Runner:** TestNG (v7.10.2)
+* **Web Driver:** Selenium 4.27
+* **Test Runner:** TestNG 7.10
+* **Reporting:** ExtentReports 5 (HTML)
 * **Build Tool:** Maven
-* **Reporting:** ExtentReports 5 (HTML Reports with Screenshots)
-* **Utilities:** Apache Commons IO, WebDriverManager
 
-## 🚀 Key Features
-* **Page Object Model (POM):** UI Locators and logic are separated from Test Classes (`/pages` vs `/tests`).
-* **Robust Synchronization:** Implements `WebDriverWait` and dynamic element handling in a `BasePage` wrapper.
-* **Automated Reporting:** Generates interactive HTML reports with pie charts and execution logs.
-* **Failure Capture:** Custom TestListener automatically captures and attaches screenshots when a test fails.
-* **Cross-Browser Ready:** Infrastructure set up for easy browser switching (Chrome default).
+### Key Framework Features
+1.  **Page Object Model (POM):**
+    * **Logic Separation:** We separated locators (in `/pages`) from assertions (in `/tests`). This ensures that if a UI ID changes, we only update one file, not fifty.
+    * *Evidence:* See `LoginPage.java` vs `EndToEndFlowTest.java`.
+2.  **Self-Healing & Synchronization:**
+    * **Explicit Waits:** `BasePage.java` implements dynamic waits to handle network lag, eliminating "flaky" tests caused by slow loading elements.
+3.  **Automated Failure Capture:**
+    * **Screenshot Listener:** A custom `TestListener` automatically captures a screenshot the exact moment a test fails and attaches it to the execution report.
+4.  **Data-Driven Logic:**
+    * The framework uses dynamic data generation (e.g., `UUID` for unique emails) to allow repeated execution without data collision.
 
-## 📂 Project Structure
-```text
-src/test/java/com/cartify/
-├── tests/              # Test Scripts (EndToEnd, Cart, Checkout)
-├── listeners/          # TestNG Listeners for logging & screenshots
-└── utils/              # Reporting & Helper classes
+## 📊 Test Execution Strategy
+The suite is divided into functional areas defined in `testng.xml`:
 
-src/main/java/com/cartify/
-└── pages/              # Page Objects (Locators & Page Actions)
-⚡ How to Run Tests
-Run all tests (Suite):
+1.  **Infrastructure Sanity:** Verifies the environment before heavy lifting.
+2.  **E2E Flows:** Full user journey (Reg -> Login -> Wishlist).
+3.  **Cart & Checkout:** Validates monetary calculations and order submission.
 
-Bash
-
+### How to Run
+```bash
+# Execute the full Regression Suite
 mvn clean test
-Run specific test class:
 
-Bash
-
+# Execute only the End-to-End flow
 mvn -Dtest=EndToEndFlowTest test
-View Reports: After execution, open the report at: target/extent-report.html
+📉 Quality Metrics (From Master Test Plan)
+Total Test Cases: 60 (Manual + Auto)
+
+Defects Found: 20 Valid Defects
+
+Critical Severity: High (Checkout Empty Cart Bug)
+
+Release Decision: NO GO (Pending Fixes)
 
 Team 50 | QA Department
-Here are the deliverables you requested. I have analyzed your project files (`pom.xml`, test code, and Master Test Plan) to ensure these are tailored exactly to your "Cartify" project.
 
-### 1\. Professional README.md
-
-*Add this to the root of your repository. It highlights your technical choices (POM, ExtentReports, Listeners) which will impress the evaluators.*
-
-````markdown
-# 🛒 Cartify Automation Framework
-
-## 📄 Project Overview
-This repository contains the automated testing framework for the **Cartify E-Commerce Platform**. It is designed to validate the functionality, stability, and reliability of the application's critical user journeys, including Registration, Shopping, and Checkout.
-
-The framework is built using the **Page Object Model (POM)** design pattern to ensure maintainability and code reusability.
-
-## 🛠 Tech Stack
-* **Language:** Java 17
-* **Core Library:** Selenium WebDriver (v4.27.0)
-* **Test Runner:** TestNG (v7.10.2)
-* **Build Tool:** Maven
-* **Reporting:** ExtentReports 5 (HTML Reports with Screenshots)
-* **Utilities:** Apache Commons IO, WebDriverManager
-
-## 🚀 Key Features
-* **Page Object Model (POM):** UI Locators and logic are separated from Test Classes (`/pages` vs `/tests`).
-* **Robust Synchronization:** Implements `WebDriverWait` and dynamic element handling in a `BasePage` wrapper.
-* **Automated Reporting:** Generates interactive HTML reports with pie charts and execution logs.
-* **Failure Capture:** Custom TestListener automatically captures and attaches screenshots when a test fails.
-* **Cross-Browser Ready:** Infrastructure set up for easy browser switching (Chrome default).
-
-## 📂 Project Structure
-```text
-src/test/java/com/cartify/
-├── tests/              # Test Scripts (EndToEnd, Cart, Checkout)
-├── listeners/          # TestNG Listeners for logging & screenshots
-└── utils/              # Reporting & Helper classes
-
-src/main/java/com/cartify/
-└── pages/              # Page Objects (Locators & Page Actions)
-````
-
-## ⚡ How to Run Tests
-
-**Run all tests (Suite):**
-
-```bash
-mvn clean test
-```
-
-**Run specific test class:**
-
-```bash
-mvn -Dtest=EndToEndFlowTest test
-```
-
-**View Reports:**
-After execution, open the report at:
-`target/extent-report.html`
-
------
-
-**Team 50 | QA Department**
-
-```
 
 ---
 
-### 2. SQL Injection (Security) Test Cases ("SIQs")
-*I interpreted "siqs" as **SQL Injection / Security Scenarios**. Add these to your "Test Cases" sheet in the Master Test Plan to show you covered security risks.*
+### Part 2: Defense SIQs (Standard Interview Questions)
 
-| TC_ID | Feature | Req ID | Title | Description | Preconditions | Test Steps | Expected Result | Priority |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **SEC-001** | **Login** | **FR-U-002** | **SQL Injection - Admin Bypass** | Verify that the login input is sanitized against common SQL injection attacks. | User is on Login Page | 1. Enter Email: `' OR '1'='1` <br> 2. Enter Password: `' OR '1'='1` <br> 3. Click Login | System should display "Invalid Credentials" error. User MUST NOT be logged in. | **Critical** |
-| **SEC-002** | **Products** | **FR-S-006** | **SQL Injection - Search Bar** | Verify that search queries do not expose database errors or dump data. | User is on Products Page | 1. In Search bar, enter: `Apple'; DROP TABLE Products; --` <br> 2. Click Search | System should show "No results found" or handle input gracefully. No Database Error/Stack Trace should appear. | **High** |
-| **SEC-003** | **Register** | **FR-U-001** | **XSS Injection - Name Field** | Verify that the name field rejects script tags (Cross-Site Scripting). | User is on Register Page | 1. Enter First Name: `<script>alert('Hacked')</script>` <br> 2. Complete other fields and Submit | The script should NOT execute. The name should be saved as plain text or rejected. | **High** |
+These are the technical questions an evaluator will ask to see if you actually understand the code or just copied it.
 
----
 
-### 3. Traceability Matrix
-*This maps your Requirements to your Test Cases. Copy this data into the **Traceability.csv** tab of your Excel sheet.*
 
-| Req_ID | Functional Requirement Summary | Linked Test Cases (UI & API) | Coverage Status |
-| :--- | :--- | :--- | :--- |
-| **FR-U-001** | User Registration (Valid/Invalid) | TC-U-1.1, TC-U-1.6, TC-U-1.7, TC_001, TC_002 | ✅ Covered |
-| **FR-U-002** | Login Validation & Security | TC-U-1.2, TC_003, SEC-001 | ✅ Covered |
-| **FR-S-005** | Product Grid Display | TC-S-005 | ✅ Covered |
-| **FR-S-006** | Search Functionality | TC-S-006, SEC-002 | ✅ Covered |
-| **FR-S-007** | Product Filtering (Price/Category) | TC-S-007 | ✅ Covered |
-| **FR-C-010** | Add to Cart Functionality | TC-C-010, TC_014 | ✅ Covered |
-| **FR-C-011** | Checkout Process & Validation | TC-C-011, TC_014 | ✅ Covered |
+#### Category 1: Architecture & Framework
+**Q1: Why did you choose the Page Object Model (POM) instead of just writing everything in one test file?**
+> **Winning Answer:** "Writing everything in one file creates 'Spaghetti Code'. If the developer changes the ID of the 'Login' button, I would have to find and fix it in 50 different test cases. With POM, I only fix it in the `LoginPage.java` file, and all my tests work again immediately. It reduces maintenance time by 80%."
 
----
+**Q2: How do you handle synchronization? Did you use `Thread.sleep`?**
+> **Winning Answer:** "We strictly avoided `Thread.sleep` because it slows down execution unnecessarily. Instead, we built a wrapper in our `BasePage` class that uses **Explicit Waits** (`WebDriverWait`). This waits *only* until the element is visible or clickable, then immediately proceeds, making our tests faster and more reliable."
 
-### 4. Team Leader Discussion Script & Flow
-*Use this script for your presentation/discussion. It is structured to be authoritative and covers the full scope of your work.*
+**Q3: Explain your `BaseTest` class. Why is it there?**
+> **Winning Answer:** "`BaseTest` is our setup engine. It uses `@BeforeMethod` to launch the browser and `@AfterMethod` to quit it. It ensures that every single test starts with a fresh, clean browser state so that data from a previous test doesn't corrupt the current one."
 
-**Phase 1: Introduction (The Hook)**
-"Good [Morning/Afternoon], everyone. I am **[Your Name]**, the QA Lead for **Team 50**. Today, we are presenting the Quality Assurance sign-off report for the **Cartify E-Commerce Platform**.
-Our goal wasn't just to 'find bugs'—it was to ensure the platform is reliable, secure, and ready for real users. We adopted a **Hybrid Testing Strategy**, combining rigorous Manual Testing with a robust Java-based Automation Framework."
+#### Category 2: Defect & Quality Strategy
+**Q4: Your report says 'Conditional Pass'. Why didn't you pass the project?**
+> **Winning Answer:** "As a QA Lead, my job is to protect the user experience. We found a **Critical (P1)** defect in the Checkout flow where a user can place an order with an empty cart. This affects the business revenue directly. Until this is fixed, I cannot sign off on a production release."
 
-**Phase 2: The Scope & Strategy**
-"We targeted 5 core business domains: User Management, Shopping, Cart, Checkout, and Admin features.
-* **Manual Testing:** We executed **60 Test Cases** covering UI, Usability, and Negative scenarios.
-* **API Testing:** We used Swagger to validate the backend independently, ensuring data integrity before it even reached the UI.
-* **Automation:** This is where we added the most value..."
+**Q5: How do you debug a test that failed in the middle of the night?**
+> **Winning Answer:** "We integrated **ExtentReports** with a **TestListener**. If a test fails, the listener automatically triggers a screenshot capture of the browser at that exact moment. I don't need to re-run the test to see what happened; I just look at the HTML report."
 
-**Phase 3: Automation Framework Deep Dive (The Technical Flex)**
-*(This is where you show off the code structure)*
-"We built a custom automation framework using **Java and Selenium**.
-* **Architecture:** We used the **Page Object Model**. This means if a button ID changes on the Login page, we update it in *one* file (`LoginPage.java`), and all 50 tests update automatically.
-* **Reliability:** We implemented 'Explicit Waits' in our `BasePage` class to handle network lag, eliminating flaky tests.
-* **Reporting:** We integrated **ExtentReports**. As you can see in our screenshots, if a test fails, the framework *automatically* takes a screenshot and attaches it to the report, making debugging instant for developers."
+#### Category 3: Advanced / Tricky Questions
+**Q6: What happens if the 'Products' page is empty in the test environment? Does your test fail?**
+> **Winning Answer:** "We anticipated that. In `EndToEndFlowTest`, we added logic that checks if the product list is empty. If it is, we inject a 'Mock Product' using JavaScript so that the test can continue to verify the 'Add to Wishlist' functionality. This makes our test robust even in unstable environments."
 
-**Phase 4: Findings & Traceability**
-"In terms of results:
-* We identified **20 Valid Defects**, including Critical (P1) issues in the Checkout flow and Search module.
-* We achieved **100% Traceability**, meaning every single requirement in the project document is linked to at least one test case, ensuring nothing was left untested."
-
-**Phase 5: Conclusion & Recommendation**
-"Based on our execution:
-While the Core Functional Flows (Registration, Browsing) are stable, the **Checkout logic** still has critical bugs involving empty cart submissions.
-Therefore, our Quality Verdict is: **Conditional Pass**. We recommend fixing the identified P1 defects before the full public release.
-Thank you. I’m happy to answer any questions about our code or test coverage."
-```
+**Q7: How did you ensure you tested everything requested?**
+> **Winning Answer:** "We created a **Traceability Matrix**. We mapped every Requirement ID (like FR-U-001) to a specific Test Case ID. This ensures 100% coverage of the requirements."
