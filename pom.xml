@@ -10,16 +10,15 @@
 
     <modules>
         <module>cartify-automation</module>
-        <module>auto</module>
     </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <selenium.version>4.23.0</selenium.version>
+        <selenium.version>4.27.0</selenium.version>
         <testng.version>7.10.2</testng.version>
-        <webdrivermanager.version>5.8.0</webdrivermanager.version>
+        <webdrivermanager.version>5.9.2</webdrivermanager.version>
         <slf4j.version>2.0.12</slf4j.version>
         <commons-io.version>2.15.1</commons-io.version>
         <extentreports.version>5.1.1</extentreports.version>

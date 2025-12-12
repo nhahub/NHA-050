@@ -6,6 +6,8 @@
     <test name="All Tests">
         <classes>
             <class name="com.cartify.tests.EndToEndFlowTest" />
+            <class name="com.cartify.tests.CartPageTest" />
+            <class name="com.cartify.tests.CheckoutPageTest" />
         </classes>
     </test>
 </suite>

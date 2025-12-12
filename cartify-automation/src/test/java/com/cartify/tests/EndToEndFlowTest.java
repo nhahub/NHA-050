@@ -121,7 +121,7 @@ public class EndToEndFlowTest extends BaseTest {
         // match");
 
         // 3. Wishlist Interaction
-        ProductPage productPage = new ProductPage(driver);
+        ProductsPage productPage = new ProductsPage(driver);
         productPage.open();
 
         // Add first product to wishlist

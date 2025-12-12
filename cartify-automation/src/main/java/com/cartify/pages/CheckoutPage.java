@@ -1,17 +1,16 @@
-package com.company.cartify.tests.cartify.pages;
+package com.cartify.pages;
 
-import com.company.cartify.tests.cartify.base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
- * CheckoutPage: صفحة الدفع
- * Updated with CSS Selectors based on actual HTML source
+ * CheckoutPage: Represents the Checkout Page.
+ * Migrated from auto module.
  */
 public class CheckoutPage extends BasePage {
 
     // ============================================
-    // Page Locators - CSS Selectors only
+    // Page Locators - CSS Selectors
     // ============================================
 
     // Form & Page Elements
@@ -101,9 +100,6 @@ public class CheckoutPage extends BasePage {
         selectByVisibleText(countryDropdown, country);
     }
 
-    /**
-     * Fill all basic checkout fields
-     */
     public void fillBasicCheckoutInfo(String fullName, String email, String phone,
             String mobile, String zipCode, String address, String gender) {
         fillFullName(fullName);
@@ -119,47 +115,28 @@ public class CheckoutPage extends BasePage {
     // Payment Methods
     // ============================================
 
-    /**
-     * Select Cash on Delivery payment method
-     */
     public void selectCashOnDelivery() {
         selectByValue(paymentMethodDropdown, "cod");
     }
 
-    /**
-     * Select Credit Card payment method
-     */
     public void selectCreditCard() {
         selectByValue(paymentMethodDropdown, "card");
     }
 
-    /**
-     * Select PayPal payment method
-     */
     public void selectPayPal() {
         selectByValue(paymentMethodDropdown, "paypal");
     }
 
-    /**
-     * Fill credit card information
-     */
     public void fillCreditCardInfo(String cardNumber, String cardName, String expiry, String cvv) {
-        // Wait for card info section to be visible
         waitForElementToBeVisible(cardInfoSection);
-
         clearAndSendKeys(cardNumberField, cardNumber);
         clearAndSendKeys(cardNameField, cardName);
         clearAndSendKeys(cardExpiryField, expiry);
         clearAndSendKeys(cardCvvField, cvv);
     }
 
-    /**
-     * Fill PayPal email
-     */
     public void fillPayPalInfo(String paypalEmail) {
-        // Wait for PayPal section to be visible
         waitForElementToBeVisible(paypalSection);
-
         clearAndSendKeys(paypalEmailField, paypalEmail);
     }
 
@@ -167,23 +144,14 @@ public class CheckoutPage extends BasePage {
     // Submit & Validation Methods
     // ============================================
 
-    /**
-     * Click Submit button
-     */
     public void clickSubmitOrder() {
         click(submitButton);
     }
 
-    /**
-     * Check if success notification is displayed
-     */
     public boolean isOrderPlacedSuccessfully() {
         return isElementDisplayed(successNotification);
     }
 
-    /**
-     * Get success message text
-     */
     public String getSuccessMessage() {
         if (isElementDisplayed(successNotification)) {
             return getElementText(successNotification);
@@ -191,52 +159,29 @@ public class CheckoutPage extends BasePage {
         return "";
     }
 
-    /**
-     * Check if validation message is displayed
-     */
     public boolean isValidationMessageDisplayed() {
         return isElementDisplayed(validationMessage);
     }
 
-    /**
-     * Get validation message text
-     */
     public String getValidationMessage() {
         if (isElementDisplayed(validationMessage)) {
             return getElementText(validationMessage);
         }
-        // For HTML5 validation, check required fields
         return "";
     }
 
-    /**
-     * Check if user is still on checkout page
-     */
     public boolean isStillOnCheckoutPage() {
         return isPageLoaded();
     }
 
-    /**
-     * Get page title
-     */
     public String getCheckoutPageTitle() {
         return getPageTitle();
     }
 
-    // ============================================
-    // Helper Methods
-    // ============================================
-
-    /**
-     * Check if card info section is visible
-     */
     public boolean isCardInfoVisible() {
         return isElementDisplayed(cardInfoSection);
     }
 
-    /**
-     * Check if PayPal section is visible
-     */
     public boolean isPayPalSectionVisible() {
         return isElementDisplayed(paypalSection);
     }
